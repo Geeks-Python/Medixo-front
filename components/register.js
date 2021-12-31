@@ -3,7 +3,7 @@ import axios from 'axios'
 import React from 'react'
 
 const Register = () => {
-    const handleCreateUser = (e) => {
+    const handleCreateUser = (e) => { 
         e.preventDefault();
 
         const config = {
@@ -20,7 +20,7 @@ const Register = () => {
                 is_superuser: false,
             }
         }
-        
+
         axios(config).then(res => {
             console.log(res.data);
         })
