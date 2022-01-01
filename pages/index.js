@@ -11,7 +11,8 @@ export default function Home() {
       </Head> */}
 
       <Register />
-      <Doctors/>
+      <Doctors />
+
     </div>
   )
 }
