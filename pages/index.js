@@ -1,6 +1,6 @@
 import Head from 'next/head'
 import Doctors from '../components/doctors'
-import Register from '../components/register'
+// import Register from './register'
 
 export default function Home() {
   return (
@@ -10,9 +10,9 @@ export default function Home() {
         <link rel="icon" href="/favicon.ico" />
       </Head> */}
 
-      <Register />
-      <Doctors />
-
+      {/* <Register /> */}
+      <Doctors/>
+ 
     </div>
   )
 }
