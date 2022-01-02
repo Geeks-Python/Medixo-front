@@ -5,7 +5,7 @@ import PatientRegisterPage from './PatientRegisterPage'
 import DoctorRegisterPage from './DoctorRegisterPage'
 import axios from 'axios';
 import 'bootstrap/dist/css/bootstrap.min.css';
-import Doctors from '../components/doctors'
+// import Doctors from '../components/doctors'
 import Footer from '../components/Footer'
 import Header from '../components/Header'
 import Main from '../components/Main'
@@ -40,7 +40,7 @@ export default function Home() {
 
         <Header />
         <Main />
-        <Doctors />
+        {/* <Doctors /> */}
         <Section />
         <Footer />
 

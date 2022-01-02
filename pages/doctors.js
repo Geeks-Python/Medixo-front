@@ -56,7 +56,7 @@ function Doctors() {
                                 <h3>{doctor.name}</h3>
                                 <h2 class="price">{doctor.speciality}</h2>
                                 <p class="address" ><b>Address:</b> {doctor.city}, {doctor.town}, building: {doctor.building_number}, {doctor.street} </p>
-                                <Link href={`appoinments/${doctor.id}`}><a class="buy">Buy Now</a></Link>
+                                <Link href={`appoinments/${doctor.id}`}><a class="buy">book apointment</a></Link>
 
                             </div>
 
@@ -65,8 +65,6 @@ function Doctors() {
 
                 })
             }
-
-
         </div>
 
     )
