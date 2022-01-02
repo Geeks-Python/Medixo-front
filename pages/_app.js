@@ -1,4 +1,7 @@
 import '../styles/globals.css'
+import '../styles/doctor.css'
+import '../styles/anasweh.css'
+
 
 import '../styles/loginPageContainer.css'
 
