@@ -65,8 +65,6 @@ function Doctors() {
 
                 })
             }
-
-
         </div>
 
     )
