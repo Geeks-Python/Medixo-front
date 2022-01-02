@@ -7,6 +7,10 @@ import Footer from '../components/Footer'
 import Header from '../components/Header'
 import Main from '../components/Main'
 import Section from '../components/Section'
+import DoctorRegisterPage from './DoctorRegisterPage'
+import PatientRegisterPage from './PatientRegisterPage'
+import Login from './Login'
+
 export default function Home() {
   return (
     <div className="">
