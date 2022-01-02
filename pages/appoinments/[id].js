@@ -58,10 +58,53 @@ export const getStaticProps = async (context) => {
     }
 }
 
-const Detail = (props) => {
+const Detail = ({ appointment }) => {
     return (
-        <div>
-            Hello {props.appointment.name}
+
+        <div className='flex'>
+            <div className='doctorInfo'>
+                <img src={appointment.img} />
+                <h2>{appointment.name}</h2>
+                <h3>{appointment.speciality}</h3>
+                <h4>{appointment.phone_number}</h4>
+                <h4>{appointment.email}</h4>
+                <h4><b>Address: </b> {appointment.city}, {appointment.town}, building: {appointment.building_number}, {appointment.street} </h4>
+            </div>
+
+            <div class="appointmentForm">
+                <form>
+
+                    <div>
+
+                        <div class="col-md-6">
+                            <div class="form-group">
+                                <label class="control-label" for="date">Date</label>
+                                <input id="date" name="date" type="date" class="form-control input-md" />
+                            </div>
+                        </div>
+
+                        <div class="col-md-6">
+                            <div class="form-group">
+                                <label class="control-label" for="time">Preferred Time</label>
+                                <select id="time" name="time" class="form-control">
+                                    {
+                                        appointment.opening_hours.map(hour => {
+                                            return <option value={hour}>{hour}:00 to {hour + 1}:00</option>
+                                        })
+                                    }
+                                </select>
+                            </div>
+                        </div>
+
+                        <div class="col-md-12">
+                            <div class="form-group">
+                                <button id="singlebutton" name="singlebutton" class="btn btn-default">Make An Appointment</button>
+                            </div>
+                        </div>
+
+                    </div>
+                </form>
+            </div>
         </div>
     )
 }
