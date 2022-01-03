@@ -42,33 +42,42 @@ function Doctors() {
     }
 
     return (
-        <div className='flex w-full'>
-            {
-                doctorData.map((doctor) => {
-                    return (
-                        <div class="card">
+        <div>
+            <div>
+                <img src='https://www.childrensmedgroup.com/cmg-media/uploads/2020/08/join-our-team-childrens-med-group.png'alt="doctorimg" class="doctorwall" />
+                <div >
+                    <h1 className='doctorsH1'>Meet Our Experience Doctors</h1>
+                    <p className='doctorsp'> “Medicine cure diseases put only doctors can cure patients."</p>
+                </div>
+                <div className='flex w-full'>
 
-                            <div class="imgBox">
-                                <img src={doctor.img} alt="mouse corsair" class="mouse" />
-                            </div>
+                    {
+                        doctorData.map((doctor) => {
+                            return (
+                                <div class="card">
 
-                            <div class="contentBox">
-                                <h3>{doctor.name}</h3>
-                                <h2 class="price">{doctor.speciality}</h2>
-                                <p class="address" ><b>Address:</b> {doctor.city}, {doctor.town}, building: {doctor.building_number}, {doctor.street} </p>
-                                <Link href={`appoinments/${doctor.id}`}><a class="buy">book apointment</a></Link>
+                                    <div class="imgBox">
+                                        <img src={doctor.img} alt="doctor img" class="mouse" />
+                                    </div>
 
-                            </div>
+                                    <div class="contentBox">
+                                        <h3>{doctor.name}</h3>
+                                        <h2 class="price">{doctor.speciality}</h2>
+                                        <p class="address" ><b>Address:</b> {doctor.city}, {doctor.town}, building: {doctor.building_number}, {doctor.street} </p>
+                                        <Link href={`appoinments/${doctor.id}`}><a class="buy">book apointment</a></Link>
 
-                        </div>
-                    )
+                                    </div>
 
-                })
-            }
+                                </div>
+                            )
+
+                        })
+                    }
 
 
+                </div>
+            </div>
         </div>
-
     )
 }
 
