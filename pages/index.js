@@ -1,17 +1,14 @@
 import Head from 'next/head'
 import { useState } from 'react';
 import Login from '../components/loginPage/Login'
-import PatientRegisterPage from './PatientRegisterPage'
-import DoctorRegisterPage from './DoctorRegisterPage'
-import axios from 'axios';
+// import PatientRegisterPage from './PatientRegisterPage'
+// import DoctorRegisterPage from './DoctorRegisterPage'
 import 'bootstrap/dist/css/bootstrap.min.css';
-import Doctors from '../components/doctors'
 import Homepage from '../components/rihan/Homepage'
-// import Doctors from '../components/doctors'
-import Footer from '../components/Footer'
-import Header from '../components/Header'
-import Main from '../components/Main'
-import Section from '../components/Section'
+// import Aboutus from '../components/rihan/aboutus'
+
+import axios from 'axios';
+
 
 const baseUrl = 'http://127.0.0.1:8000/';
 const tokenUrl = baseUrl + 'api/token/';
@@ -34,15 +31,9 @@ export default function Home() {
       <div className="right-container">
 
         <Homepage token={token} />
+    
       </div>
-      <div className="">
-
-        <Header />
-        <Main />
-        <Section />
-        <Footer />
-
-      </div>
+      
     </main>
   )
 }
