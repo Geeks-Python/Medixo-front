@@ -1,5 +1,5 @@
 import Head from 'next/head'
-import { useState } from 'react';
+import { useState,useEffect } from 'react';
 import Login from '../components/loginPage/Login'
 // import PatientRegisterPage from './PatientRegisterPage'
 // import DoctorRegisterPage from './DoctorRegisterPage'
@@ -15,6 +15,15 @@ const tokenUrl = baseUrl + 'api/token/';
 export default function Home() {
 
   const [token, setToken] = useState('');
+  useEffect(()=> {
+    const tokendata = window.localStorage.getItem('token')
+    setToken(JSON.parse(tokendata))
+ },[])
+
+  useEffect(()=> {
+     window.localStorage.setItem('token',JSON.stringify(token))
+  })
+
 
   const submitHandler = async (e, credintials) => {
     e.preventDefault();
