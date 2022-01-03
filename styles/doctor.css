@@ -1,19 +1,24 @@
 @import url("https://fonts.googleapis.com/css2?family=Istok+Web:wght@400;700&display=swap");
 
-/* * {
-  margin: 0;
-  padding: 0;
-  font-family: "Istok Web", sans-serif;
-} */
+.doctorsH1{
+  color: rgb(63, 152, 194);
+  font-size: 28px;
+  font-weight: 700;
+  letter-spacing: 1px;
+  text-shadow: 2px 2px 1px black;
+  margin-top: 10px;
+  margin-left: 500px;  
 
-/* body {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  min-height: 100vh;
-  background: #212121;
-} */
-
+}
+.doctorsp{
+  color: rgb(112, 182, 214);
+  font-size: 28px;
+  font-weight: 700;
+  letter-spacing: 1px;
+  text-shadow: 2px 2px 1px black;
+  margin-top: 30px;
+  margin-left: 250px;  
+}
 .card {
   position: relative;
   width: 22%;
@@ -128,4 +133,10 @@
 .mouse {
   height: 300px;
   width: auto;
+}
+
+.doctorwall{
+  height: 390px;
+  width:2000px;
+  /* margin-left: 390px; */
 }

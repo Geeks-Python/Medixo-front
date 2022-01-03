@@ -7,6 +7,11 @@ import axios from 'axios';
 import 'bootstrap/dist/css/bootstrap.min.css';
 import Doctors from '../components/doctors'
 import Homepage from '../components/rihan/Homepage'
+// import Doctors from '../components/doctors'
+import Footer from '../components/Footer'
+import Header from '../components/Header'
+import Main from '../components/Main'
+import Section from '../components/Section'
 
 const baseUrl = 'http://127.0.0.1:8000/';
 const tokenUrl = baseUrl + 'api/token/';
@@ -31,6 +36,12 @@ export default function Home() {
         <Homepage token={token} />
       </div>
       <div className="">
+
+        <Header />
+        <Main />
+        <Section />
+        <Footer />
+
       </div>
     </main>
   )
