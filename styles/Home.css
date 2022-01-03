@@ -64,3 +64,126 @@
   .border{
     border-color: rgba(255,255,255,.25)
   }
+
+
+
+
+  .services {
+    padding: 60px 0 60px 0px;
+    background-color: #ffffff;
+    color: rgb(0, 0, 0);
+}
+
+.services .content {
+    position: relative;
+    padding: 20px;
+    border: 1px solid #2196f3;
+    transition: 0.5s;
+    margin-top: 30px;
+    color: black;
+}
+
+.services .content:hover {
+    border: 3px solid #2196f3;
+    border-color: #096cbd;
+
+    background-color: rgb(231, 231, 231);
+    color: #333;
+}
+
+.services .content h3 {
+    font-size: 24px;
+    font-weight: 500;
+}
+
+.services .content p {
+    font-size: 16px;
+    margin-top: 25px;
+    line-height: 30px;
+}
+
+.services .content i  {
+    /* border: 1px solid #2196f3; */
+    width: 150px;
+    height: 150px;
+    font-size: 70px;
+    line-height: 120px;
+}
+
+.svgHome {
+    color: #2196f3;
+    margin-left:2.2em
+}
+
+section#services {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+#first-P h1 {
+  text-align: inherit;
+}
+
+#first-P h1::after{
+  color: white;
+  content: "to our my ";
+  animation: change-content 1.5s ease-in-out forwards infinite alternate ;
+}
+
+@keyframes change-content {
+  0%{
+      content: "";
+  }
+  7%{
+      content: "t";
+  }
+  14%{
+      content: "to";
+  }
+  21%{
+      content: "to o";
+  }
+  28%{
+      content: "to ou";
+  }
+  35%{
+      content: "to our";
+  }
+  42%{
+      content: "to our m";
+  }
+  49%{
+      content: "to our my";
+  }
+  56%{
+      content: "to our my s";
+  }
+  73%{
+      content: "to our my si";
+  }
+  80%{
+      content: "to our my sit";
+  }
+  100%{
+      content: "to our my site";
+  }
+  /* 95%{
+      content: "Study Station";
+  }
+  96%{
+      content: "Study Station!";
+  }
+  97%{
+      content: "Study Station!";
+  }
+  98%{
+      content: "Study Station!";
+  }
+  99%{
+      content: "Study Station!";
+  }
+  100%{
+      content: "Study Station!";
+  } */
+}

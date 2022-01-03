@@ -1,17 +1,297 @@
 import React, { Component } from 'react'
 
 export default class footer extends Component {
-    render() {
-        return (
-            <div>
-                
+  render() {
+    return (
+      <div>
 
-          <footer class="text-center lg:text-left bg-gray-100 text-gray-600 ">
-            <div class="flex justify-center items-center lg:justify-between p-6 border-b border-gray-300 ">
+ {/* style="background-image:url(img/bg-img/x3.jpg.pagespeed.ic.LFIUg5Bby5.webp)"
+<footer class="footer-area bg-img bg-gradient-overlay" >
+<div class="container">
+<div class="row">
+
+<div class="col-12 col-sm-6 col-lg-4">
+<div class="single-footer-widget">
+<a href="./index.html" class="d-block mb-4"><img src="data:image/webp;base64,UklGRiAFAABXRUJQVlA4TBMFAAAvl8AJEFpRkLYB0/m3fSVExAQA8h/ZkSQpkqW/MKFKCnU33b371nq/8zEzHtbDfMzME3Ndd0gMABBu0na2bdu2rZdt27Zt27Zt27Zt7xy4jaRIycLx5bjvC3AcwG0j/f8z/KRIitQLplG1l6NDpc7V5WBgACH6bhCSFIYUUkghhRRSSCGFFF4hhRRSSCEGbhspyjGnWro3eKSCKBEVrnrVifpVgPpTl2pYxSsZBbPTtC1USMrnS/VU15cUlreDCqSM1U2NVK/K+dCzi0hIa4WqmnZfG1WqrJW0olVkilXJK7df6m1xQI0oPM8tkqKJFZFaU0CpbqWgwJ0UhahM1HpV1RdF5ZlFKkxFkMJUO6W2lMTws6cs1GNVqYtvnlfExwlEO1QDpQoVwgpBilhNVZVaU4ieVYTBGVS28lKAClgtScGq5qpSmZ5VjMJBKwr1qWJWbXql+nYWxe05RVb8RUmrQtX5duUqha6Oqj56TrET987+Ubd/bBtxUBkVkGCRglDIjWoogpAmS4lXlWL1jCIvAuhn5aI8bBud8SMJrmEyOqIvNuETAgkuI3ETpqqrVNw4VkremSTFXRt/kgYgTFLG8ZokRXGSAT8AEr1IyI7TSGJJkMeqVsHbPp+RONSEKeYqtbsWpNxMwqMJw/N4UDsIj6/4fvuVCrNtrBgSpPRSNaiAUgTrQQqScOQRerAmjicq5YYVg+K0bVwdg6peqmyrlPRKfCqD8abmio2dLBRxsUZOAdrlMgGMBzNjTLDGin8xFeDWGNRpcq9XKXN3DCQXI8mZRPYmyaVUQiVka9IO7A9mePlDgq1jUKj9HVRvpRzd00/uzEsSXnKcxVsVpTP/Ak9yoelAu+GKzwjbFqqVdUG5uCd4W9Q9CZTucGXLxRO/g4XtrzP+DOj02Gp45SP+pic4dnVPhoVcbjxZpdcTbGw7sG7En06g6i8l475Ocr806o+9OalVjVg+49xU+lYAT6XCJbjcdqD8YO3k2GqhFAEibhbVoB5CVKxrMfA1e4jQdNyuPhjYC1RXatfItWFuflUNa7vCzeR6G4IzfVC9N/0p4K5Rb6Mnm4jcM6fpnlbVrWNzglltyLkk+IceSIOCOJUk+50+pVWK2Rh6Aq6WRN8zWj1WCvVE7wTvEaELZtpGHPwcoOpVp5EVA9b+3vxFFqi/gUy/yXq/iXxJ0LILKto2DvdROOpLcRmLUMgd/eROnJkHDwlw+ONM13YIwvMET/8vU7A3CTLaNhYmQVk3qniV4j08R4g71pLPC1WyBnwuZNNx2RiRBIOXXViVBNlakLOJVRRqWsEbezB63TnmCNp81lLvIews7QjbxUiEv8ke8iyyMDwJcts2NiRB1GWqglLVitQX9pBizblvRxZbM8IE//tsTE+CR4hn26iRBCWbNzgeNqHKRlH5DX5iRu+UQPIxgVZAECX6n2zExsckOLtvG6najxlOJVizjFLcCtfIiDf4gDieU9RKElzaPfg9QRnbxr6k+QJXIP//GtT1rGJuklz8aaNTggS2jUn5iihNExrie7DA8/7Rx54kwT9MfP0EA9BhEYJkmIkCXgZgY/Ljo+cVEbA3SYK36IVYgxykwCT8SLD/nWf2I+YkSYJfWHftsBlqkA0dcAD/k2AxwnhyUR/v04hPuIzdz3EIN/Fz2YDGnl/Ewyz8zdA9LEB8bwWRAuOe9Q/hDSYgpbeGT1AYg7AV9/4m+IFb2HYOxRDiqQUA" alt=""/></a>
+<p>Etiam sutor risus, dapibus act elefend katen, lacinia sitamet denim. Mauris sagittis kansa interdum dignissim.</p>
+<div class="footer-contact">
+<p><i class="icon_pin"></i> 28 Jackson Street, Chicago, 7788569 USA</p>
+<p><i class="icon_phone"></i> +84. 2252. 2250. 122</p>
+<p><i class="icon_mail"></i> <a href="/cdn-cgi/l/email-protection" class="__cf_email__" data-cfemail="e58c8b838acb81808b918aa58288848c89cb868a88">[email&#160;protected]</a></p>
+</div>
+</div>
+</div>
+
+<div class="col-12 col-sm-6 col-lg">
+<div class="single-footer-widget">
+
+<h5 class="widget-title">Opening Hours</h5>
+
+<ul class="opening-hours">
+<li><span>Mon-Wed</span> <span>8.00-18.00</span></li>
+<li><span>Thu-Fri</span> <span>8.00-17.00</span></li>
+<li><span>Sat</span> <span>9.00-17.00</span></li>
+<li><span>Sun</span> <span>10.00-17.00</span></li>
+<li><span>Holiday</span> <span>Closed</span></li>
+</ul>
+</div>
+</div>
+
+<div class="col-12 col-sm-6 col-lg">
+<div class="single-footer-widget">
+
+<h5 class="widget-title">Quick Link</h5>
+
+<nav>
+<ul class="quick-links">
+<li><a href="#">About</a></li>
+<li><a href="#">FAQs</a></li>
+<li><a href="#">Contact</a></li>
+<li><a href="#">Policy</a></li>
+<li><a href="#">News</a></li>
+<li><a href="#">Advisors</a></li>
+<li><a href="#">Careers</a></li>
+<li><a href="#">Dentist</a></li>
+<li><a href="#">Services</a></li>
+<li><a href="#">Legals</a></li>
+</ul>
+</nav>
+</div>
+</div>
+
+<div class="col-12 col-sm-6 col-lg">
+<div class="single-footer-widget">
+
+<h5 class="widget-title">Newsletter</h5>
+<p>We will send out weekly newest article and some great offers</p>
+
+<div class="footer-newsletter-form">
+<form action="#" method="post">
+<input type="email" name="nl-email" value="" placeholder="Email Address"/>
+<button type="submit"><i class="fa fa-paper-plane" aria-hidden="true"></i></button>
+</form>
+</div>
+
+<div class="footer-social-info">
+<a href="#" data-toggle="tooltip" data-placement="top" title="Facebook"><i class="fa fa-facebook"></i></a>
+<a href="#" data-toggle="tooltip" data-placement="top" title="Twitter"><i class="fa fa-twitter"></i></a>
+<a href="#" data-toggle="tooltip" data-placement="top" title="Google Plus"><i class="fa fa-google-plus"></i></a>
+<a href="#" data-toggle="tooltip" data-placement="top" title="Linkedin"><i class="fa fa-linkedin"></i></a>
+<a href="#" data-toggle="tooltip" data-placement="top" title="Pinterest"><i class="fa fa-pinterest"></i></a>
+</div>
+</div>
+</div>
+</div>
+</div>
+
+<div class="container">
+<div class="row">
+<div class="col-12">
+<div class="copywrite-content">
+<p>
+Copyright &copy;<script data-cfasync="false" src="/cdn-cgi/scripts/5c5dd728/cloudflare-static/email-decode.min.js"></script><script>document.write(new Date().getFullYear());</script> All rights reserved | This template is made with <i class="fa fa-heart-o" aria-hidden="true"></i> by <a href="https://colorlib.com" target="_blank">Colorlib</a>
+</p>
+</div>
+</div>
+</div>
+</div>
+</footer>  */}
+
+
+
+{/* 
+
+        <footer class="footer">
+          <div class="footer_content">
+            <div class="container">
+              <div class="row">
+
+                <div class="col-lg-3 footer_col">
+                  <div class="footer_about">
+                    <div class="footer_logo">
+                      <a href="#">
+                        <div>Dr<span>PRO</span></div>
+                        <div>Plastic Surgery</div>
+                      </a>
+                    </div>
+                    <div class="footer_about_text">
+                      <p>Nulla facilisi. Nulla egestas vel lacus sed interdum. Sed mollis, orci eleme ntum eleifend tempor, nunc libero porttitor tellus.</p>
+                    </div>
+                  </div>
+                </div>
+
+                <div class="col-lg-3 footer_col">
+                  <div class="footer_contact">
+                    <div class="footer_title">Contact Info</div>
+                    <ul class="contact_list">
+                      <li>+53 345 7953 32453</li>
+                      <li>yourmail@gmail.com</li>
+                      <li>contact@gmail.com</li>
+                    </ul>
+                  </div>
+                </div>
+
+                <div class="col-lg-3 footer_col">
+                  <div class="footer_location">
+                    <div class="footer_title">Our Locations</div>
+                    <ul class="locations_list">
+                      <li>
+                        <div class="location_title">Miami</div>
+                        <div class="location_text">45 Creekside Av  FL 931</div>
+                      </li>
+                      <li>
+                        <div class="location_title">Los Angeles</div>
+                        <div class="location_text">1481 Creekside Lane Avila Beach, CA 931</div>
+                      </li>
+                    </ul>
+                  </div>
+                </div>
+
+                <div class="col-lg-3 footer_col">
+                  <div class="opening_hours">
+                    <div class="footer_title">Opening Hours</div>
+                    <ul class="opening_hours_list">
+                      <li class="d-flex flex-row ">
+                        <div>Monday:</div>
+                        <div class="ml-auto">8:00am - 9:00pm</div>
+                      </li>
+                      <li class="d-flex flex-row align-items-start justify-content-start">
+                        <div>Thuesday:</div>
+                        <div class="ml-auto">8:00am - 9:00pm</div>
+                      </li>
+                      <li class="d-flex flex-row align-items-start justify-content-start">
+                        <div>Wednesday:</div>
+                        <div class="ml-auto">8:00am - 9:00pm</div>
+                      </li>
+                      <li class="d-flex flex-row align-items-start justify-content-start">
+                        <div>Thursday:</div>
+                        <div class="ml-auto">8:00am - 9:00pm</div>
+                      </li>
+                      <li class="d-flex flex-row align-items-start justify-content-start">
+                        <div>Friday:</div>
+                        <div class="ml-auto">8:00am - 7:00pm</div>
+                      </li>
+                    </ul>
+                  </div>
+                </div>
+
+              </div>
+            </div>
+          </div>
+          <div class="footer_bar">
+            <div class="container">
+              <div class="row">
+                <div class="col">
+                  <div class="footer_bar_content  d-flex flex-md-row flex-column align-items-md-center justify-content-start">
+                    <div class="copyright">
+                      Copyright &copy;<script>document.write(new Date().getFullYear());</script> All rights reserved | This template is made with <i class="fa fa-heart-o" aria-hidden="true"></i> by <a href="https://colorlib.com" target="_blank">Colorlib</a>
+                    </div>
+                    <nav class="footer_nav ml-md-auto">
+                      <ul class="d-flex flex-row align-items-center justify-content-start">
+                        <li><a href="index.html">Home</a></li>
+                        <li><a href="about.html">About us</a></li>
+                        <li><a href="services.html">Services</a></li>
+                        <li><a href="blog.html">News</a></li>
+                        <li><a href="contact.html">Contact</a></li>
+                      </ul>
+                    </nav>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </footer> */}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+        {/* <footer class="page-footer">
+    <div class="container">
+      <div class="row px-md-3">
+        <div class="col-sm-6 col-lg-3 py-3">
+          <h5>Company</h5>
+          <ul class="footer-menu">
+            <li><a href="#">About Us</a></li>
+            <li><a href="#">Career</a></li>
+            <li><a href="#">Editorial Team</a></li>
+            <li><a href="#">Protection</a></li>
+          </ul>
+        </div>
+        <div class="col-sm-6 col-lg-3 py-3">
+          <h5>More</h5>
+          <ul class="footer-menu">
+            <li><a href="#">Terms & Condition</a></li>
+            <li><a href="#">Privacy</a></li>
+            <li><a href="#">Advertise</a></li>
+            <li><a href="#">Join as Doctors</a></li>
+          </ul>
+        </div>
+        <div class="col-sm-6 col-lg-3 py-3">
+          <h5>Our partner</h5>
+          <ul class="footer-menu">
+            <li><a href="#">One-Fitness</a></li>
+            <li><a href="#">One-Drugs</a></li>
+            <li><a href="#">One-Live</a></li>
+          </ul>
+        </div>
+        <div class="col-sm-6 col-lg-3 py-3">
+          <h5>Contact</h5>
+          <p class="footer-link mt-2">351 Willow Street Franklin, MA 02038</p>
+          <a href="#" class="footer-link">701-573-7582</a>
+          <a href="#" class="footer-link">healthcare@temporary.net</a>
+
+          <h5 class="mt-3">Social Media</h5>
+          <div class="footer-sosmed mt-3">
+            <a href="#" target="_blank"><span class="mai-logo-facebook-f"></span></a>
+            <a href="#" target="_blank"><span class="mai-logo-twitter"></span></a>
+            <a href="#" target="_blank"><span class="mai-logo-google-plus-g"></span></a>
+            <a href="#" target="_blank"><span class="mai-logo-instagram"></span></a>
+            <a href="#" target="_blank"><span class="mai-logo-linkedin"></span></a>
+          </div>
+        </div>
+      </div>
+
+      <hr/>
+
+      <p id="copyright">Copyright &copy; 2020 <a href="https://macodeid.com/" target="_blank">MACode ID</a>. All right reserved</p>
+    </div>
+  </footer> */}
+
+         <footer class="footer text-center lg:text-left  ">
+            <div class="footer2 flex justify-center items-center lg:justify-between p-6 border-b border-gray-300 ">
               <div class="mr-12 hidden lg:block">
                 <span>Get connected with us on social networks:</span>
               </div>
-              <div class="flex justify-center ">
+              <div class="footer3 flex justify-center ">
                 <a href="#!" class="mr-6 text-gray-600">
                   <svg aria-hidden="true" focusable="false" data-prefix="fab" data-icon="facebook-f"
                     class="w-2.5" role="img" xmlns="http://www.w3.org/2000/svg"
@@ -64,18 +344,21 @@ export default class footer extends Component {
                 </a>
               </div>
             </div>
-            <div class="mx-6 py-10  md:text-left">
+
+
+
+            <div class="title mx-6 py-10  md:text-left">
               <div class="grid grid-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
                 <div class="ml-10 w-1/2">
                   <h6 class="
-            uppercase
-            font-semibold
-            mb-4
-            flex
-            items-center
-            justify-center
-            md:justify-start
-          ">
+                              uppercase
+                              font-semibold
+                              mb-4
+                              flex
+                              items-center
+                              justify-center
+                              md:justify-start
+                                                          ">
                     <svg aria-hidden="true" focusable="false" data-prefix="fas" data-icon="cubes"
                       class="w-4 mr-3" role="img" xmlns="http://www.w3.org/2000/svg"
                       viewBox="0 0 512 512">
@@ -91,12 +374,12 @@ export default class footer extends Component {
                   </p>
                 </div>
 
-                <div class="ml-10">
+                <div class="hours ml-10">
                   <h6 class="uppercase font-semibold mb-4  justify-center ">
                     Opening Hours
                   </h6>
 
-                  <h6>Sunday : 8:00 - 19:00</h6>
+                  <h6>Sunday  : 8:00 - 19:00</h6>
                   <h6>Monday : 8:00 - 19:00</h6>
                   <h6>Tuesday : 8:00 - 19:00</h6>
                   <h6>Wednesday : 8:00 - 19:00</h6>
@@ -105,11 +388,11 @@ export default class footer extends Component {
                 </div>
 
 
-                <div class="relative left-36 bottom-2 w-full">
+                <div class="conta relative left-36 bottom-2 w-full">
                   <h6 class="uppercase font-semibold mb-4 flex justify-center md:justify-start">
                     Contact
                   </h6>
-                  <p class="flex items-center  mb-4">
+                  <p  class="p flex items-center  mb-4">
                     <svg aria-hidden="true" focusable="false" data-prefix="fas" data-icon="home"
                       class="w-4 mr-4" role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 576 512">
                       <path fill="currentColor"
@@ -118,7 +401,7 @@ export default class footer extends Component {
                     </svg>
                     New York, NY 10012, US
                   </p>
-                  <p class="flex items-center justify-center md:justify-start mb-4">
+                  <p class="p flex items-center justify-center md:justify-start mb-4">
                     <svg aria-hidden="true" focusable="false" data-prefix="fas" data-icon="envelope"
                       class="w-4 mr-4" role="img" xmlns="http://www.w3.org/2000/svg"
                       viewBox="0 0 512 512">
@@ -128,7 +411,7 @@ export default class footer extends Component {
                     </svg>
                     info@example.com
                   </p>
-                  <p class="flex items-center justify-center md:justify-start mb-4">
+                  <p class="p flex items-center justify-center md:justify-start mb-4">
                     <svg aria-hidden="true" focusable="false" data-prefix="fas" data-icon="phone"
                       class="w-4 mr-4" role="img" xmlns="http://www.w3.org/2000/svg"
                       viewBox="0 0 512 512">
@@ -138,7 +421,7 @@ export default class footer extends Component {
                     </svg>
                     + 01 234 567 88
                   </p>
-                  <p class="flex items-center justify-center md:justify-start">
+                  <p class="p flex items-center justify-center md:justify-start">
                     <svg aria-hidden="true" focusable="false" data-prefix="fas" data-icon="print"
                       class="w-4 mr-4" role="img" xmlns="http://www.w3.org/2000/svg"
                       viewBox="0 0 512 512">
@@ -150,13 +433,13 @@ export default class footer extends Component {
                 </div>
               </div>
             </div>
-            <div class="text-center p-6 bg-gray-200">
+            <div class="footera text-center p-6 ">
               <span>© 2021 Copyright:</span>
-              <a class="text-gray-600 font-semibold" href="https://tailwind-elements.com/">Medixo</a>
+              <a class="footeraa " href="https://tailwind-elements.com/">Medixo</a>
             </div>
-          </footer>
+          </footer> 
 
-            </div>
-        )
-    }
+      </div>
+    )
+  }
 }
