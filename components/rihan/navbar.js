@@ -5,6 +5,11 @@ import React, { Component } from 'react'
 
 
 export default class navbar extends Component {
+	logout(){
+		localStorage.clear()
+		window.location.reload();
+	  }
+  
     render() {
         return (
             <div>
@@ -24,6 +29,7 @@ export default class navbar extends Component {
 					<li><a href="services.html">Services</a></li>
 					<li><a href="blog.html">News</a></li>
 					<li><a href="contact.html">Contact</a></li>
+					<li><a style={{'cursor':'pointer'}} onClick={this.logout}>logout</a></li>
 				</ul>
 			</nav>
 			<div class="header_extra d-flex flex-row align-items-center justify-content-end ml-auto">
