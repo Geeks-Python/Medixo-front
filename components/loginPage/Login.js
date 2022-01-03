@@ -32,6 +32,7 @@ function Login({submitHandler}) {
 
             <>        
              <div className="login-left" />
+             
             <div className="login-right"> 
             <div className="login-form">
      
@@ -39,11 +40,11 @@ function Login({submitHandler}) {
             <form className="mt-36 " onSubmit={e=>submitHandler(e,credintials)} method='post'>
             <h1>Login</h1>
               <label className="required" htmlFor="username">
-                <input name="username" type="text" id="username" placeholder="username"  required  onChange={usernameChangeHandler}/>
+                <input className="input"  name="username" type="text" id="username" placeholder="username"  required  onChange={usernameChangeHandler}/>
               </label>
       <br></br>
               <label className="required" htmlFor="password">
-                <input name="password" id="password" type="password" placeholder="Password"  required onChange={passwordChangeHandler} />
+                <input className="input" name="password" id="password" type="password" placeholder="Password"  required onChange={passwordChangeHandler} />
               </label>
       
               <select  >

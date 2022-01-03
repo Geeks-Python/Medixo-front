@@ -28,8 +28,8 @@
   color: #b09cf1;
 }
 
-.login-form input {
-  width: 50%;
+.login-form .input {
+  /* width: 50%; */
   background-color: #f0eaff;
   border: none;
   font-size: 18px;

@@ -5,6 +5,8 @@ import PatientRegisterPage from './PatientRegisterPage'
 import DoctorRegisterPage from './DoctorRegisterPage'
 import axios from 'axios';
 import 'bootstrap/dist/css/bootstrap.min.css';
+import Doctors from '../components/doctors'
+import Homepage from '../components/rihan/Homepage'
 // import Doctors from '../components/doctors'
 import Footer from '../components/Footer'
 import Header from '../components/Header'
@@ -28,19 +30,15 @@ export default function Home() {
   if (!token) return <Login submitHandler={submitHandler} />
   return (
 
-
     <main className="App">
       <div className="right-container">
 
-        <DoctorRegisterPage token={token} />
-
-
+        <Homepage token={token} />
       </div>
       <div className="">
 
         <Header />
         <Main />
-        {/* <Doctors /> */}
         <Section />
         <Footer />
 
