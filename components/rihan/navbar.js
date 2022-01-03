@@ -30,6 +30,8 @@ export default class navbar extends Component {
 					<li><a href="blog.html">News</a></li>
 					<li><a href="contact.html">Contact</a></li>
 					<li><a style={{'cursor':'pointer'}} onClick={this.logout}>logout</a></li>
+					<li><a style={{'cursor':'pointer'}} onClick={}>sign in</a></li>
+					<li><a style={{'cursor':'pointer'}} onClick={}>sign up</a></li>
 				</ul>
 			</nav>
 			<div class="header_extra d-flex flex-row align-items-center justify-content-end ml-auto">
