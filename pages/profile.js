@@ -3,6 +3,7 @@ import DoctorProfile from '../components/profiles/doctorProfile'
 import { useState, useEffect } from 'react';
 import axios from 'axios';
 import jwtDecode from 'jwt-decode';
+import PatientProfile from '../components/profiles/patientProfile';
 
 
 const Profile = () => {
@@ -54,6 +55,7 @@ const Profile = () => {
     return (
         <div>
             <DoctorProfile appointmentData={appointmentData} doctorData={doctorData} accessToken={accessToken} />
+            <PatientProfile/>
         </div>
     )
 }
