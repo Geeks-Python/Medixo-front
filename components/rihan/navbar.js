@@ -20,7 +20,7 @@ export default class navbar extends Component {
 			<nav class="main_nav">
 				<ul class="d-flex flex-row align-items-center justify-content-start">
 					<li class="active"><a href="index.html">Home</a></li>
-					<li><a href="about.html">About us</a></li>
+					<li><a href="/aboutus">About us</a></li>
 					<li><a href="services.html">Services</a></li>
 					<li><a href="blog.html">News</a></li>
 					<li><a href="contact.html">Contact</a></li>

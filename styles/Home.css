@@ -108,10 +108,6 @@
     height: 150px;
     font-size: 70px;
     line-height: 120px;
-    /* border-radius: 100%; */
-    /* margin: 50px 0 25px 0; */
-    /* margin-left:30px */
-    /* background: linear-gradient(45deg, #4b00ff, #2196f3); */
 }
 
 .svgHome {
@@ -125,22 +121,12 @@ section#services {
     align-items: center;
 }
 
-
-
-
-
-
-
-
-
-
-
 #first-P h1 {
   text-align: inherit;
 }
 
 #first-P h1::after{
-  color: rgb(26, 145, 250);
+  color: white;
   content: "to our my ";
   animation: change-content 1.5s ease-in-out forwards infinite alternate ;
 }

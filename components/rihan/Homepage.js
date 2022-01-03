@@ -33,8 +33,8 @@ export default class Homepage extends Component {
             <div class="banner_inner d-flex align-items-center">
               <div class="container">
                 <div class="banner_content row">
-                  <div class="col-lg-12">
-                    <h1>We Care for Your Health Every Moment</h1>
+                  <div class="col-lg-12" id="first-P" >
+                    <h1>Welcome </h1>
                     <p>If you are looking at blank cassettes on the web, you may be very confused at the difference in price You may see some
                       for as low as each.</p>
                     <a class="main_btn mr-10" href="#">get started</a>
@@ -52,7 +52,7 @@ export default class Homepage extends Component {
               </div>
 
               <div class="relative z-10 lg:w-3/4 xl:w-2/4 h-100 lg:mt-16">
-                <div id="first-P">
+                <div >
                   <h1  class="text-4xl font-bold leading-tight text-white md:text-5xl xl:text-6xl">
                    Welcome,</h1>
                   <p class="mt-4 text-xl leading-snug text-blue-100 md:text-2xl">Welcome to  our web site Office of Medixo
