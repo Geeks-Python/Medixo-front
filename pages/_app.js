@@ -12,7 +12,7 @@ import '../styles/appointment.css'
 import '../styles/loginPageContainer.css'
 import '../styles/patientRegisterPage.css'
 import '../styles/doctorRegisterPage.css'
-
+import '../styles/profiles.css'
 
 // import '../styles/theme.css'
 

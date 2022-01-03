@@ -37,6 +37,7 @@ export default function Home() {
   return (
 
     <main className="App">
+        <Header />
       <div className="right-container">
 
         <Homepage token={token} />
