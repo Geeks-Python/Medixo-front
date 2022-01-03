@@ -10,15 +10,15 @@ import { FaShoppingCart } from "react-icons/fa";
 class Header extends React.Component {
 	render() {
 		return (
-			<Navbar className="header-nav" collapseOnSelect expand="lg"  variant="dark">
-				<Container>
+			<Navbar className="header-nav " collapseOnSelect expand="lg"  variant="dark">
+				<Container >
 					<Navbar.Brand href="#home">Medixo</Navbar.Brand>
 					<Navbar.Toggle aria-controls="responsive-navbar-nav" />
 					<Navbar.Collapse id="responsive-navbar-nav">
 						<Nav className="me-auto">
 							<Nav.Link href="#features">Home</Nav.Link>
-							<Nav.Link href="#pricing">Appointement</Nav.Link>
-							<Nav.Link href="/doctors">Doctors</Nav.Link>
+							<Nav.Link href="/profile" className=" text-black">Profile</Nav.Link>
+							<Nav.Link href="/doctors" className=" text-black">Doctors</Nav.Link>
 							<NavDropdown title="Dropdown" id="collasible-nav-dropdown">
 								<NavDropdown.Item href="#action/3.1">Action</NavDropdown.Item>
 								<NavDropdown.Item href="#action/3.2">

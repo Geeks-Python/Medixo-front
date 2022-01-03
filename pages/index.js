@@ -5,13 +5,10 @@ import PatientRegisterPage from './PatientRegisterPage'
 import DoctorRegisterPage from './DoctorRegisterPage'
 import axios from 'axios';
 import 'bootstrap/dist/css/bootstrap.min.css';
-import Doctors from '../components/doctors'
 import Homepage from '../components/rihan/Homepage'
-// import Doctors from '../components/doctors'
-import Footer from '../components/Footer'
-import Header from '../components/Header'
-import Main from '../components/Main'
-import Section from '../components/Section'
+// import Section from '../components/Section'
+import Header from '../components/Header';
+
 
 const baseUrl = 'http://127.0.0.1:8000/';
 const tokenUrl = baseUrl + 'api/token/';
@@ -31,16 +28,16 @@ export default function Home() {
   return (
 
     <main className="App">
+        <Header />
       <div className="right-container">
 
         <Homepage token={token} />
       </div>
       <div className="">
 
-        <Header />
-        <Main />
-        <Section />
-        <Footer />
+        {/* <Main /> */}
+        {/* <Section /> */}
+        {/* <Footer /> */}
 
       </div>
     </main>
