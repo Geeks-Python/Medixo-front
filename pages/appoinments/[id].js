@@ -91,9 +91,11 @@ const Detail = ({ appointment }) => {
             data: {
                 patient_id: patientData.user_id,
                 patient_name: patientData.name,
+                Doctor_name: appointment.name,
                 hour: e.target.hour.value,
                 date: e.target.date.value,
                 doctor_id: appointment.user,
+                clinic_location: `${appointment.city}, ${appointment.town}, ${appointment.building_number}, ${appointment.street}`
             },
         }
         axios(config).then(res => {
