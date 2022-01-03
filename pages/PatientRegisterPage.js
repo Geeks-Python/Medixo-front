@@ -7,7 +7,6 @@ import axios from 'axios'
 
 const PatientRegisterPage = () => {
   
-
   const handleCreateUser = (e) => { 
     e.preventDefault();
 
