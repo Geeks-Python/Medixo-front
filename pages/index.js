@@ -11,7 +11,7 @@ import axios from 'axios';
 
 
 const baseUrl = 'http://127.0.0.1:8000/';
-const tokenUrl = baseUrl + 'api/token/';
+const tokenUrl = baseUrl + 'auth/login/';
 export default function Home() {
 
   const [token, setToken] = useState('');
