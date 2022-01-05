@@ -145,6 +145,7 @@ const Detail = ({ appointment }) => {
                     
                     <h2 className="text-white mt-14 mb-7">Contact Informations</h2>
                     <h4><b className='text-white '>Phone: </b>{appointment.phone_number}</h4>
+
                     <h4><b className='text-white'>Email: </b>{appointment.email}</h4>
                 </div>
 
