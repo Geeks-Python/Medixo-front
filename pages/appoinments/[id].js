@@ -2,65 +2,65 @@ import axios from 'axios';
 import React from 'react'
 import jwtDecode from 'jwt-decode';
 import { useState, useEffect } from 'react';
-import Navbar from "../../components/rihan/navbar"
-import Fotterr from "../../components/rihan/footer"
-import 'bootstrap/dist/css/bootstrap.min.css';
 
-const token = async () => {
-    const configToken = {
-        method: "POST",
-        url: "http://127.0.0.1:8000/auth/login/",
-        data: {
-            "username": "3",
-            "password": "3"
-        }
-    }
-    let to;
-    await axios(configToken).then(data => {
-        to = data.data.access
-    });
-    return to
-}
+// const token = async () => {
+//     const configToken = {
+//         method: "POST",
+//         url: "http://127.0.0.1:8000/auth/login/",
+//         data: {
+//             "username": "3",
+//             "password": "3"
+//         }
+//     }
+//     let to;
+//     await axios(configToken).then(data => {
+//         to = data.data.access
+//     });
 
-export const getStaticPaths = async () => {
 
-    let cred;
-    await token().then(res => {
-        cred = {
-            headers: { "Authorization": `Bearer ${res}` }
-        }
-    });
+//     return to
+// }
 
-    const res = await fetch("http://127.0.0.1:8000/api/v1/doctor/", cred)
-    const data = await res.json()
 
-    const paths = data.map(doctor => {
-        return {
+// export const getStaticPaths = async () => {
 
-            params: { id: doctor.id.toString() }
-        }
-    });
+//     let cred;
+//     await token().then(res => {
+//         cred = {
+//             headers: { "Authorization": `Bearer ${res}` }
+//         }
+//     });
 
-    return {
-        paths,
-        fallback: false
-    }
-}
+//     const res = await fetch("http://127.0.0.1:8000/api/v1/doctor/", cred)
+//     const data = await res.json()
 
-export const getStaticProps = async (context) => {
-    const id = context.params.id;
-    let cred;
-    await token().then(res => {
-        cred = {
-            headers: { "Authorization": `Bearer ${res}` }
-        }
-    });
-    const res = await fetch(`http://127.0.0.1:8000/api/v1/doctor/${id}/`, cred);
-    const data = await res.json();
-    return {
-        props: { appointment: data }
-    }
-}
+//     const paths = data.map(doctor => {
+//         return {
+
+//             params: { id: doctor.id.toString() }
+//         }
+//     });
+
+//     return {
+//         paths,
+//         fallback: false
+//     }
+// }
+
+// export const getStaticProps = async (context) => {
+//     const id = context.params.id;
+//     // let cred;
+//     // await token().then(res => {
+//     //     cred = {
+//     //         headers: { "Authorization": `Bearer ${res}` }
+//     //     }
+//     // });
+//     // const res = await fetch(`http://127.0.0.1:8000/api/v1/doctor/${id}/`, cred);
+//     // const data = await res.json();
+//     return {
+//         props: { id: id }
+//     }
+// }
 
 
 const Detail = ({ appointment }) => {
@@ -73,11 +73,13 @@ const Detail = ({ appointment }) => {
     }, [])
 
     const decoder = () => {
-        const storageToken = JSON.parse(window.localStorage.getItem("token"))
-        setAccses(storageToken);
-        const decoded = jwtDecode(storageToken)
-        setpatientData(decoded)
+        token().then(res => {
+            setAccses(res);
+            const decoded = jwtDecode(res)
+            setpatientData(decoded)
+        });
 
+        // const decoded = jwtDecode(accses)
     }
 
     const appointmentSubmit = (e) => {
@@ -96,12 +98,21 @@ const Detail = ({ appointment }) => {
                 clinic_location: `${appointment.city}, ${appointment.town}, ${appointment.building_number}, ${appointment.street}`
             },
         }
-        axios(config)
+        axios(config).then(res => {
+            console.log(res);
+        });
     }
     return (
-<>
-<Navbar/>
+
         <div className='flex'>
+            {/* <div className='doctorInfo'>
+                <img src={appointment.img} />
+                <h2>{appointment.name}</h2>
+                <h3>{appointment.speciality}</h3>
+                <h4>{appointment.phone_number}</h4>
+                <h4>{appointment.email}</h4>
+                <h4><b>Address: </b> {appointment.city}, {appointment.town}, building: {appointment.building_number}, {appointment.street} </h4>
+            </div> */}
             <div class="doctorInfo">
                 <div class="cards">
                     <div class="cards__image-container">
@@ -110,7 +121,7 @@ const Detail = ({ appointment }) => {
 
                     <svg class="cards__svg" viewBox="0 0 800 500">
 
-                        <path d="M 0 100 Q 50 200 100 250 Q 250 400 350 300 C 400 250 550 150 650 300 Q 750 450 800 400 L 800 500 L 0 500" stroke="transparent" fill="#57ccc3" />
+                        <path d="M 0 100 Q 50 200 100 250 Q 250 400 350 300 C 400 250 550 150 650 300 Q 750 450 800 400 L 800 500 L 0 500" stroke="transparent" fill="#333" />
                         <path class="cards__line" d="M 0 100 Q 50 200 100 250 Q 250 400 350 300 C 400 250 550 150 650 300 Q 750 450 800 400" stroke="pink" stroke-width="3" fill="transparent" />
                     </svg>
 
@@ -131,6 +142,7 @@ const Detail = ({ appointment }) => {
                     
                     <h2 className="text-white mt-14 mb-7">Contact Informations</h2>
                     <h4><b className='text-white '>Phone: </b>{appointment.phone_number}</h4>
+
                     <h4><b className='text-white'>Email: </b>{appointment.email}</h4>
                 </div>
 
@@ -157,9 +169,6 @@ const Detail = ({ appointment }) => {
                 </form>
             </div>
         </div>
-        <Fotterr/>
-
-        </>
     )
 }
 

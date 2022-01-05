@@ -24,9 +24,7 @@ const PatientRegisterPage = () => {
         is_superuser: false,
       }
     }
-    axios(config).then(res => {
-        console.log(res.data);
-    })
+    axios(config)
     window.location.href = '/'
 
 }

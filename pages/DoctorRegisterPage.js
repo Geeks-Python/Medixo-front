@@ -27,8 +27,6 @@ const DoctorRegisterPage = () => {
 		axios(config).then((res) => {
 			setDoctorData(res.data);
 		});
-		// console.log(doctorData.id)
-		// window.location.href = "./DoctorClinick";
 	};
 
 	return (

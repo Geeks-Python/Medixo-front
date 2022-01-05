@@ -9,12 +9,10 @@ function Login({ submitHandler }) {
 
   const [credintials, setCredintials] = useState({ username: '', password: '' });
   const usernameChangeHandler = (e) => {
-    console.log(e.target.value);
     setCredintials({ username: e.target.value })
   }
 
   const passwordChangeHandler = (e) => {
-    console.log(e.target.value);
     setCredintials({ ...credintials, password: e.target.value });
   }
 
@@ -40,11 +38,8 @@ function Login({ submitHandler }) {
               <label className="required" htmlFor="password">
                 <input className="input" name="password" id="password" type="password" placeholder="Password" required onChange={passwordChangeHandler} />
               </label>
+              <br></br>
 
-              <select  >
-                <option value="patient">Patient</option>
-                <option value="doctor">Doctor</option>
-              </select>
               <button type="submit">LOGIN</button>
             </form>
             <span>
