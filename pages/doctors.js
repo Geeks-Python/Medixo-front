@@ -54,9 +54,15 @@ function Doctors() {
                 <div className='flex w-full'>
                     {
                         doctorData.map((doctor) => {
+                            console.log(doctor.name);
                             return (
-                                <div class="card">
 
+                               
+                                <div class="card">
+ <div>
+
+           <p>{doctor.name}</p>                         
+</div>
                                     <div class="imgBox">
                                         <img src={doctor.img} alt="doctor img" class="mouse" />
                                     </div>
@@ -65,6 +71,9 @@ function Doctors() {
                                         <h3>{doctor.name}</h3>
                                         <h2 class="price">{doctor.speciality}</h2>
                                         <p class="address" ><b>Address:</b> {doctor.city}, {doctor.town}, building: {doctor.building_number}, {doctor.street} </p>
+
+                                       
+//  <Link href={`appoinments/${doctor.id}`}><a class="buy">book apointment</a></Link>
                                         
                                         <button onClick={()=>{router.push({pathname: `/details`,query: {q:doctor.id}})}}><a class="buy">book apointment</a></button>
 

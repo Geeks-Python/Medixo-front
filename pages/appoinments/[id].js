@@ -128,32 +128,33 @@ const Detail = ({ appointment }) => {
                     <div class="cards__content text-center">
                         <h1 class="cards__title">Dr. {appointment.name}</h1>
                         <h3>{appointment.speciality}</h3>
-                        <h4><b className='text-white' >Address: </b>{appointment.city}, {appointment.town}, building: {appointment.building_number}, {appointment.street} </h4>
+                        <h4><b class='add' className='' >Address: </b>{appointment.city}, {appointment.town}, building: {appointment.building_number}, {appointment.street} </h4>
                     </div>
                 </div>
             </div>
 
             <div class="signupSection">
                 <div class="info">
-                    <h2 className=" m-5 ">Opening Hours</h2>
+                    <h2 class="open" className="m-5">Opening Hours</h2>
                     <i class="icon ion-ios-ionic-outline" aria-hidden="true"></i>
-                    <p className='float-left ml-8'>Saturday-Thursday</p>
-                    <p className='float-right  mr-8'>09:00 to 06:00</p>
+                    <p className='float-left py-4 ml-8'>Saturday-Thursday</p>
+                    <p className='py-4'>09:00 to 06:00</p>
+                    
+                    <h2 className="text-white mt-14 mb-7">Contact Informations</h2>
+                    <h4><b className='text-white '>Phone: </b>{appointment.phone_number}</h4>
 
-                    <h2 className=" mt-14  mb-7">Contact Informations</h2>
-                    <h4><b className='text-white'>Phone: </b>{appointment.phone_number}</h4>
                     <h4><b className='text-white'>Email: </b>{appointment.email}</h4>
                 </div>
 
                 <form class="signupForm" onSubmit={appointmentSubmit}>
-                    <h2>Make appointment</h2>
+                    <h2 class="bo">Make appointment</h2>
                     <ul class="noBullet">
                         <li>
                             <label for="username"></label>
                             <input type="date" class="inputFields" id="username" name="date" required />
                         </li>
                         <li>
-                            <select id="hour" name="hour" class="inputFields" required>
+                            <select id="hour" name="hour" class="inputFields" class="salsa" required>
                                 {
                                     appointment.opening_hours.map(hour => {
                                         return <option value={hour}>{hour}:00 to {hour + 1}:00</option>

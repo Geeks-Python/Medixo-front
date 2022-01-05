@@ -50,6 +50,14 @@
     animation: ContentFadeIn 0.8s 1.6s forwards;
 }
 
+
+.cards__content .add {
+    font-weight: 900;
+color:#828282;
+
+
+}
+
 .cards__svg {
     position: absolute;
     left: 0;
@@ -137,9 +145,10 @@
     border-right: 5px solid rgba(30, 30, 30, .8);
 }
 
-.info h2 {
-    padding-top: 30px;
-    font-weight: 300;
+.info .open {
+    /* padding-top: 10px; */
+    font-weight: 500;
+    color:white
 }
 
 .info p {
@@ -159,8 +168,12 @@
     transition: 0.2s;
 }
 
+.signupForm .salsa{
+    background: rgba(20, 20, 20, .6);
+}
+
 .signupForm h2 {
-    font-weight: 300;
+    font-weight: 600;
 }
 
 .inputFields {
