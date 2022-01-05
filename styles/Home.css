@@ -104,7 +104,6 @@
 }
 
 .services .content i  {
-    /* border: 1px solid #2196f3; */
     width: 150px;
     height: 150px;
     font-size: 70px;
@@ -160,121 +159,11 @@ section#services {
   56%{
       content: "To Medixo";
   }
-  /* 73%{
-      content: "To Medixo S";
-  } */
-  /* 80%{
-      content: "To Medixo Si";
-  }
-  85%{
-      content: "To Medixo Sit";
-  }
-  100%{
-    content: "To Medixo Site";
-} */
-  /* 95%{
-      content: "Study Station";
-  }
-  96%{
-      content: "Study Station!";
-  }
-  97%{
-      content: "Study Station!";
-  }
-  98%{
-      content: "Study Station!";
-  }
-  99%{
-      content: "Study Station!";
-  }
-  100%{
-      content: "Study Station!";
-  } */
 }
-
-
-
-
-
 
 #first-c h1 {
   text-align: inherit;
 }
-/* 
-#first-c h1::after{
-  color: white;
-  content: "To Medixo";
-  animation: change-content 1.5s ease-in-out forwards infinite alternate ;
-}
-
-@keyframes change-content {
-  0%{
-      content: "";
-  }
-  7%{
-      content: "T";
-  }
-  14%{
-      content: "To";
-  }
-  21%{
-      content: "To M";
-  }
-  28%{
-      content: "To Me";
-  }
-  35%{
-      content: "To Med";
-  }
-  42%{
-      content: "To Medi";
-  }
-  49%{
-      content: "To Medix";
-  }
-  56%{
-      content: "To Medixo";
-  }
-  /* 73%{
-      content: "To Medixo S";
-  } */
-  /* 80%{
-      content: "To Medixo Si";
-  }
-  85%{
-      content: "To Medixo Sit";
-  }
-  100%{
-    content: "To Medixo Site";
-} */
-  /* 95%{
-      content: "Study Station";
-  }
-  96%{
-      content: "Study Station!";
-  }
-  97%{
-      content: "Study Station!";
-  }
-  98%{
-      content: "Study Station!";
-  }
-  99%{
-      content: "Study Station!";
-  }
-  100%{
-      content: "Study Station!";
-  } */
-/* } */
-
-
- */
-
-
-
-
-
-
 
 .header .header_content  .main_nav .nave .logout{
   margin-left: 30em;

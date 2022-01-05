@@ -5,7 +5,6 @@
   font-size: 28px;
   font-weight: 700;
   letter-spacing: 1px;
-  /* text-shadow: 2px 2px 1px black; */
   margin-top: 10px;
   margin-left: 530px;  
 
@@ -16,7 +15,6 @@
   font-size: 28px;
   font-weight: 700;
   letter-spacing: 1px;
-  /* text-shadow: 2px 2px 1px black; */
   margin-top: 30px;
   margin-left: 270px;  
 }
@@ -36,9 +34,6 @@
     transition: 1s;
 }
 
-/* .address{
-    color: white;
-} */
 .card::before {
   content: "";
   position: absolute;
@@ -81,15 +76,9 @@
     border-radius: 500%;
 }
 
-/*  
-.card:hover .imgBox img {
-    max-width: 50%;
-      
-} */
 
 .card .contentBox {
   position: relative;
-  /* padding: 0px; */
   display: flex;
   justify-content: center;
   align-items: center;
@@ -140,5 +129,4 @@
 .doctorwall{
   height: 760px;
   width:50%;
-  /* margin-left: 390px; */
 }

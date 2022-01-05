@@ -70,10 +70,7 @@ p a:hover::after
 	background: rgba(87,204,195,0.75);
 	color: #FFFFFF;
 }
-p::selection
-{
-	
-}
+
 h1{font-size: 60px;}
 h2{font-size: 48px;}
 h3{font-size: 36px;}
@@ -132,9 +129,6 @@ h1, h2, h3, h4, h5, h6
 	background: transparent;
 	border: solid 2px #57ccc3;
 }
-/*********************************
-3. Header
-*********************************/
 
 .header
 {
@@ -199,11 +193,6 @@ h1, h2, h3, h4, h5, h6
 {
 	margin-left:23em;
 }
-
-/* .main_nav ul li a:active {
-	background-color: yellow;
-  } */
-
 
 .main_nav ul li:not(:last-child)
 {
