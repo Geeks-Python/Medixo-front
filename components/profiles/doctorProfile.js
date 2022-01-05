@@ -44,7 +44,7 @@ const DoctorProfile = (props) => {
                 town: e.target.town.value,
                 building_number: e.target.building_number.value,
                 street: e.target.street.value,
-                img: e.target.img.value,
+                img: e.target.clinc_img.value,
                 opening_hours: props.profileData[0].opening_hours,
                 user: props.profileData[0].user,
 
@@ -52,6 +52,7 @@ const DoctorProfile = (props) => {
         };
         await axios(configPut)
     };
+    // console.log(props.profileData);
     return (
         <>
             <head>
@@ -112,7 +113,7 @@ const DoctorProfile = (props) => {
                             {showMyClinic &&
                                 <div >
                                     <div className='w-2/4 shadow-2xl text-center shadow-slate-500 rounded-xl clinicInfo '>
-                                        <img src={props.profileData[0].img} />
+                                        <img src={props.profileData[0].clinc_img} />
                                         <p><b>Name: </b>{props.profileData[0].name}</p>
                                         <p><b>Email: </b>{props.profileData[0].email}</p>
                                         <p><b>Phone NO.: </b>{props.profileData[0].phone_number}</p>
@@ -152,7 +153,7 @@ const DoctorProfile = (props) => {
                                                 </Form.Group>
                                                 <Form.Group className="mb-3">
                                                     <Form.Label>Image</Form.Label>
-                                                    <Form.Control type="text" name="img" placeholder="your Image" defaultValue={props.profileData[0].img} />
+                                                    <Form.Control type="text" name="img" placeholder="your Image" defaultValue={props.profileData[0].clinc_img} />
                                                 </Form.Group>
                                                 <Button variant="primary" type="submit">
                                                     Submit

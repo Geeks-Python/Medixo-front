@@ -30,7 +30,6 @@ function Doctors() {
         });
     }
 
-
     return (
         <div>
             <Navbar />
@@ -50,14 +49,13 @@ function Doctors() {
 
                 <div className='flex col-lg-12'>
                     {doctorData.map((doctor) => {
-                        console.log(doctor.name);
                         return (
 
 
                             <div class=" card">
 
                                 <div class="imgBox">
-                                    <img src={doctor.img} alt="doctor img" class="mouse" />
+                                    <img src={doctor.clinc_img} alt="doctor img" class="mouse" />
                                 </div>
 
                                 <div class="contentBox">

@@ -8,9 +8,25 @@ const DoctorClinick = (props) => {
   const handleCreateClinic = async (e) => {
     e.preventDefault();
 
-    const token = JSON.parse(window.localStorage.getItem("token"))
 
-    const decoded = jwtDecode(token)
+    const conf = {
+
+      method: "POST",
+      url: `${process.env.NEXT_PUBLIC_BACK_END}auth/login/`,
+      data: {
+        username: props.doctorData.username,
+        password: props.pass,
+      }
+    }
+    let token;
+    await axios(conf).then(res => {
+      //   setDoctorData(res.data);
+      console.log(res.data)
+      token = res.data.access
+
+    })
+
+    const decoded=jwtDecode(token)
 
     const config = {
       method: "POST",
@@ -26,7 +42,7 @@ const DoctorClinick = (props) => {
         building_number: e.target.building_number.value,
         street: e.target.street.value,
         user: decoded.user_id,
-        img: e.target.img.value,
+        img: e.target.clinc_img.value,
         opening_hours: [9, 10, 11, 12],
       }
     }

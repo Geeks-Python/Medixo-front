@@ -65,7 +65,7 @@ const Details = () => {
                 <div class="doctorInfo">
                     <div class="cards">
                         <div class="cards__image-container">
-                            <img class="cards__image img" src={clinicData.img} alt="" />
+                            <img class="cards__image img" src={clinicData.clinc_img} alt="" />
                         </div>
 
                         <svg class="cards__svg" viewBox="0 0 800 500">
