@@ -99,11 +99,10 @@ const PatientProfile = (props) => {
                                         </li>
 
                                         {myAppointments.map(apt => {
-                                            console.log(myAppointments);
                                             return (
                                                 <li class="table-row">
                                                     <div class="col col-1" data-label="Job Id">{apt.Doctor_name}</div>
-                                                    <div class="col col-2" data-label="Customer Name">{apt.patient_name}</div>
+                                                    <div class="col col-2" data-label="Customer Name">{apt.date}</div>
                                                     <div class="col col-3" data-label="Amount">{apt.hour}:00 to {parseInt(apt.hour) + 1}:00</div>
                                                     <div class="col col-4" data-label="Payment Status">{apt.clinic_location}</div>
                                                 </li>
