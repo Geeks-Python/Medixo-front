@@ -1,11 +1,8 @@
 import Head from 'next/head'
 import { useState } from 'react';
 import Login from '../components/loginPage/Login'
-// import PatientRegisterPage from './PatientRegisterPage'
-// import DoctorRegisterPage from './DoctorRegisterPage'
 import 'bootstrap/dist/css/bootstrap.min.css';
 import Homepage from './Homepage'
-// import Aboutus from '../components/rihan/aboutus'
 
 import axios from 'axios';
 
@@ -29,10 +26,11 @@ export default function Home() {
   return (
     
     <main className="App">
+
       <div className="right-container">
 
         <Homepage token={token} />
-    {/* <Homepage/> */}
+    
       </div>
       
     </main>
