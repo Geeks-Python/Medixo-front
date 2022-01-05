@@ -8,7 +8,7 @@ const Register = () => {
 
         const config = {
             method: "POST",
-            url: "http://127.0.0.1:8000/auth/register/",
+            url: `${process.env.NEXT_PUBLIC_BACK_END}auth/register/`,
             data: {
                 username: e.target.username.value,
                 password: e.target.password.value,

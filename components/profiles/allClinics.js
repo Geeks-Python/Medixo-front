@@ -15,7 +15,7 @@ const AllClinics = (props) => {
     const getData = () => {
         const getConfig = {
             method: "GET",
-            url: `http://127.0.0.1:8000/api/v1/doctor/`,
+            url: `${process.env.NEXT_PUBLIC_BACK_END}api/v1/doctor/`,
             headers: { 'Authorization': 'Bearer ' + props.accessToken },
         };
         axios(getConfig).then(res => {
@@ -26,7 +26,7 @@ const AllClinics = (props) => {
     const handleDelete = async (id) => {
         const config = {
             method: "DELETE",
-            url: `http://127.0.0.1:8000/api/v1/doctor/${id}/`,
+            url: `process.env.NEXT_PUBLIC_BACK_ENDapi/v1/doctor/${id}/`,
             headers: { 'Authorization': 'Bearer ' + props.accessToken },
         };
         await axios(config).then(getData());

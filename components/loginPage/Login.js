@@ -1,8 +1,7 @@
 
-import React from 'react'
-
 import Link from 'next/link'
-import { useState } from 'react';
+import { useState, useEffect } from 'react';
+import axios from 'axios';
 
 
 function Login({ submitHandler }) {
@@ -15,6 +14,20 @@ function Login({ submitHandler }) {
   const passwordChangeHandler = (e) => {
     setCredintials({ ...credintials, password: e.target.value });
   }
+
+  useEffect(() => {
+    const config = {
+      method: "POST",
+      url: `https://medixo.herokuapp.com/auth/login/`,
+      body: {
+        "username": "yousef",
+        "password": "123456789yy"
+      }
+    };
+    axios(config).then(res => {
+      console.log(res.data);
+    })
+  }, [])
 
 
 

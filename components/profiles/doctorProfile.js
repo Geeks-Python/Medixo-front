@@ -32,7 +32,7 @@ const DoctorProfile = (props) => {
 
         const configPut = {
             method: "PUT",
-            url: `http://127.0.0.1:8000/api/v1/doctor/${props.profileData[0].id}/`,
+            url: `${process.env.NEXT_PUBLIC_BACK_END}api/v1/doctor/${props.profileData[0].id}/`,
             headers: { 'Authorization': 'Bearer ' + props.accessToken },
             data: {
                 id: props.profileData[0].id,
@@ -89,14 +89,6 @@ const DoctorProfile = (props) => {
                                 <div class="col-md-6 ml-auto mr-auto">
                                     <div class="profile-tabs">
                                         <ul class="nav nav-pills nav-pills-icons justify-content-center" role="tablist">
-                                            <li class="nav-item">
-                                                <button onClick={showInfoHandler}>
-                                                    <a class={showInfo ? "nav-link active" : "nav-link"} role="tab" data-toggle="tab">
-                                                        <i class="material-icons">person</i>
-                                                        My Profile
-                                                    </a>
-                                                </button>
-                                            </li>
                                             <li class="nav-item">
                                                 <button onClick={showScheduleHandler}>
                                                     <a class={showSchedule ? "nav-link active" : "nav-link"} role="tab" data-toggle="tab">

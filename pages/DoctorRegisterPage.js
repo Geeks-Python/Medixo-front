@@ -8,10 +8,10 @@ const DoctorRegisterPage = () => {
 	const [pass, setPass] = useState("");
 	const handleCreateDoctor = (e) => {
 		e.preventDefault();
-    setPass(e.target.password.value)
+		setPass(e.target.password.value)
 		const config = {
 			method: "POST",
-			url: "http://127.0.0.1:8000/auth/register/",
+			url: `${process.env.NEXT_PUBLIC_BACK_END}auth/register/`,
 			data: {
 				username: e.target.username.value,
 				password: e.target.password.value,
@@ -29,92 +29,91 @@ const DoctorRegisterPage = () => {
 		});
 	};
 
-	return (
-		<>
-			{doctorData == "" ?(
-				<section>
-					<div className="doctor-register-left" />
-					<div className="doctor-register-right">
-						<div className="doctor-register-form">
-							<form className="mt-30 " onSubmit={handleCreateDoctor}>
-								<h1 className='m-10'> Doctor Registration</h1>
-								<label className="required" htmlFor="username">
-									<input
-										name="username"
-										type="text"
-										id="name"
-										placeholder="username"
-										required
-									/>
-								</label>
-								<br></br>
+	return (<>
+		{doctorData == "" ? (
+			<section>
+				<div className="doctor-register-left" />
+				<div className="doctor-register-right">
+					<div className="doctor-register-form">
+						<form className="mt-30 " onSubmit={handleCreateDoctor}>
+							<h1 className='m-10'> Doctor Registration</h1>
+							<label className="required" htmlFor="username">
+								<input
+									name="username"
+									type="text"
+									id="name"
+									placeholder="username"
+									required
+								/>
+							</label>
+							<br></br>
 
-								<label htmlFor="image">
-									<input
-										name="firstName"
-										type="text"
-										id="firstName"
-										placeholder="firstName"
-									/>
-								</label>
-								<br></br>
+							<label htmlFor="image">
+								<input
+									name="firstName"
+									type="text"
+									id="firstName"
+									placeholder="firstName"
+								/>
+							</label>
+							<br></br>
 
-								<label htmlFor="image">
-									<input
-										name="lastName"
-										type="text"
-										id="lastName"
-										placeholder="lastName"
-									/>
-								</label>
+							<label htmlFor="image">
+								<input
+									name="lastName"
+									type="text"
+									id="lastName"
+									placeholder="lastName"
+								/>
+							</label>
 
-								<br></br>
+							<br></br>
 
-								<label className="required" htmlFor="email">
-									<input
-										name="email"
-										type="email"
-										id="email"
-										placeholder="Email address"
-										required
-									/>
-								</label>
-								<br></br>
+							<label className="required" htmlFor="email">
+								<input
+									name="email"
+									type="email"
+									id="email"
+									placeholder="Email address"
+									required
+								/>
+							</label>
+							<br></br>
 
-								<label className="required" htmlFor="password">
-									<input
-										name="password"
-										id="password"
-										type="password"
-										placeholder="Password"
-										required
-									/>
-								</label>
+							<label className="required" htmlFor="password">
+								<input
+									name="password"
+									id="password"
+									type="password"
+									placeholder="Password"
+									required
+								/>
+							</label>
 
-								<br></br>
+							<br></br>
 
-								<label className="required" htmlFor="password">
-									<input
-										name="rePassword"
-										id="rePassword"
-										type="password"
-										placeholder="Re-Password"
-										required
-									/>
-								</label>
+							<label className="required" htmlFor="password">
+								<input
+									name="rePassword"
+									id="rePassword"
+									type="password"
+									placeholder="Re-Password"
+									required
+								/>
+							</label>
 
-								<button type="submit">Register</button>
-							</form>
-							{/* {userInfo.error ? (<div className="error-class"><p>{userInfo.error}</p></div>) : null} */}
-							<span>
-								{"Already registered? "}
-								<Link href="/">Click Here</Link>
-							</span>
-						</div>
+							<button type="submit">Register</button>
+						</form>
+
+						<span>
+							{"Already registered? "}
+							<Link href="/">Click Here</Link>
+						</span>
 					</div>
-				</section>
-			): <DoctorClinick doctorData = {doctorData}  pass = {pass}/>}
-		</>
+				</div>
+			</section>
+		) : <DoctorClinick doctorData={doctorData} pass={pass} />}
+	</>
 	);
 };
 

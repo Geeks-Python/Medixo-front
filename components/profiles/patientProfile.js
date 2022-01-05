@@ -23,7 +23,7 @@ const PatientProfile = (props) => {
 
         const config = {
             method: "GET",
-            url: "http://127.0.0.1:8000/api/v1/doctor/appointment/",
+            url: `${process.env.NEXT_PUBLIC_BACK_END}api/v1/doctor/appointment/`,
             headers: { 'Authorization': 'Bearer ' + token },
         };
         await axios(config).then(res => {
