@@ -36,7 +36,6 @@ const PatientRegisterPage = () => {
       <div className="patient-register-left" />
       <div className="patient-register-right">
         <div className="patient-register-form">
-          {/* <img alt="logo" className="logo"  /> */}
 
           <form className="mt-30 " onSubmit={handleCreateUser}>
             <h1> Patient Registration</h1>

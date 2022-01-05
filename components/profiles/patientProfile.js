@@ -99,6 +99,7 @@ const PatientProfile = (props) => {
                                         </li>
 
                                         {myAppointments.map(apt => {
+                                            console.log(myAppointments);
                                             return (
                                                 <li class="table-row">
                                                     <div class="col col-1" data-label="Job Id">{apt.Doctor_name}</div>

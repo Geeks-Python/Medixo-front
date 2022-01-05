@@ -13,24 +13,18 @@ import axios from "axios";
 
 const navbar = () => {
 
-   const [name, setName] = useState("");
+//    const [name, setName] = useState("");
 	
-	 useEffect(() => { 
-		const tokendata = JSON.parse(window.localStorage.getItem('token'))
-		
-		const  decodeddata = jwtDecode(tokendata)
-		console.log(decodeddata)
-
-		
-		console.log(setName(decodeddata.name))
-	
-		},[])
+// 	 useEffect(() => { 
+// 		const tokendata = JSON.parse(window.localStorage.getItem('token'))
+// 		// const  decodeddata = jwtDecode(tokendata)
+// 		// console.log(decodeddata)	
+// 		},[])
 
 	const logout = (e) => {
 		localStorage.clear();
 		window.location.reload();
 	};
-	console.log(name)
 	
 
 	return (
@@ -50,35 +44,15 @@ const navbar = () => {
 
 
 
-						<ul class="d-flex flex-row align-items-center justify-content-start">
-							<li class="active">
-								<a href="index.html">Home</a>
-							</li>
-							<li>
-								<a href="/aboutus">About us</a>
-							</li>
-							<li>
-								<a href="services.html">Services</a>
-							</li>
-							<li>
-								<a href="blog.html">News</a>
-							</li>
-							<li>
-								<a href="contact.html">Contact</a>
-							</li>
-							<li>
-								<a style={{ cursor: "pointer" }} onClick={logout}>
-									logout
-								</a>
-							</li>
-							<li>
-								<a style={{ cursor: "pointer" }}>
-								{name}
-								</a>
-							</li>
-							<li>
-								<a style={{ cursor: "pointer" }}>sign up</a>
-							</li>
+					<ul class="nave d-flex flex-row align-items-center justify-content-start">
+							<li class=""><a href="/">Home</a></li>
+							<li><a href="/doctors">Doctors</a></li>
+							<li><a href="blog.html">News</a></li>
+							<li><a href="/aboutus"> About us</a></li>
+							<li><a href="/profile">Profile</a></li>
+							<li class="aa"  ><a style={{ 'cursor': 'pointer' }}  onClick={logout}> Logout </a></li>
+							{/* <li><a style={{ 'cursor': 'pointer' }} >  </a></li> */}
+							{/* <li><a style={{'cursor':'pointer'}} >sign up</a></li> */}
 						</ul>
 					</nav>
 					<div class="header_extra d-flex flex-row align-items-center justify-content-end ml-auto"></div>

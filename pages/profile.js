@@ -5,6 +5,8 @@ import axios from 'axios';
 import jwtDecode from 'jwt-decode';
 import PatientProfile from '../components/profiles/patientProfile';
 import AdminProfile from '../components/profiles/adminProfile';
+import Navbar from '../components/rihan/navbar';
+
 
 
 const Profile = () => {
@@ -45,7 +47,8 @@ const Profile = () => {
     }, []);
 
     return (
-        <div>
+        <>
+            <Navbar/>
             {decodedData.is_admin &&
                 <AdminProfile
                     allClinics={allClinics}
@@ -54,20 +57,20 @@ const Profile = () => {
                     accessToken={accessToken}
                 />
             }
-            {/* {(!decodedData.is_admin && decodedData.is_doctor) && */}
+            {(!decodedData.is_admin && decodedData.is_doctor) &&
             <DoctorProfile
                 appointmentData={appointmentData}
                 profileData={profileData}
                 accessToken={accessToken}
                 decodedData={decodedData}
             />
-            {/* } */}
+            }
             {(!decodedData.is_admin && !decodedData.is_doctor) &&
                 <PatientProfile
                     profileData={decodedData}
                 />
             }
-        </div>
+        </>
     )
 }
 
