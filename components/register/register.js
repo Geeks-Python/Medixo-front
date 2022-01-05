@@ -21,9 +21,7 @@ const Register = () => {
             }
         }
 
-        axios(config).then(res => {
-            console.log(res.data);
-        })
+        axios(config)
     }
     return (
         <div>

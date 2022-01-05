@@ -19,11 +19,8 @@ const token = async () => {
     await axios(configToken).then(data => {
         to = data.data.access
     });
-
-
     return to
 }
-
 
 export const getStaticPaths = async () => {
 
@@ -76,13 +73,11 @@ const Detail = ({ appointment }) => {
     }, [])
 
     const decoder = () => {
-        token().then(res => {
-            setAccses(res);
-            const decoded = jwtDecode(res)
-            setpatientData(decoded)
-        });
+        const storageToken = JSON.parse(window.localStorage.getItem("token"))
+        setAccses(storageToken);
+        const decoded = jwtDecode(storageToken)
+        setpatientData(decoded)
 
-        // const decoded = jwtDecode(accses)
     }
 
     const appointmentSubmit = (e) => {
@@ -101,23 +96,12 @@ const Detail = ({ appointment }) => {
                 clinic_location: `${appointment.city}, ${appointment.town}, ${appointment.building_number}, ${appointment.street}`
             },
         }
-        axios(config).then(res => {
-            console.log(res);
-        });
+        axios(config)
     }
     return (
 <>
 <Navbar/>
         <div className='flex'>
-           
-            {/* <div className='doctorInfo'>
-                <img src={appointment.img} />
-                <h2>{appointment.name}</h2>
-                <h3>{appointment.speciality}</h3>
-                <h4>{appointment.phone_number}</h4>
-                <h4>{appointment.email}</h4>
-                <h4><b>Address: </b> {appointment.city}, {appointment.town}, building: {appointment.building_number}, {appointment.street} </h4>
-            </div> */}
             <div class="doctorInfo">
                 <div class="cards">
                     <div class="cards__image-container">

@@ -4,9 +4,8 @@ import { useState, useEffect } from 'react'
 import jwtDecode from 'jwt-decode';
 
 const PatientProfile = (props) => {
-    const [showInfo, setShowInfo] = useState(true);
     const [appointments, setShowAppointments] = useState(false);
-    const [myData, setShowMyData] = useState(false);
+    const [myData, setShowMyData] = useState([]);
     const [token, setToken] = useState(false);
     const [myAppointments, setMyAppointments] = useState([]);
 
@@ -14,21 +13,9 @@ const PatientProfile = (props) => {
         getDataHandler()
     }, [])
     const getDataHandler = async () => {
-        const configToken = {
-            method: "POST",
-            url: "http://127.0.0.1:8000/auth/login/",
-            data: {
-                "username": "3",
-                "password": "3"
-            }
-        };
-        let decodeToken
-        await axios(configToken).then(data => {
-            decodeToken = data.data.access;
-            setToken(decodeToken)
-        });
-
-        const decoded = jwtDecode(decodeToken)
+        const storageToken = JSON.parse(window.localStorage.getItem("token"))
+        setToken(storageToken)
+        const decoded = jwtDecode(storageToken)
         setShowMyData(decoded);
     }
 
@@ -65,16 +52,16 @@ const PatientProfile = (props) => {
                 <div class="page-header header-filter" data-parallax="true" ></div>
                 <div class="main main-raised">
                     <div class="profile-content">
-                        <div class="container">
+                        <div class="container pb-20">
                             <div class="row">
                                 <div class="col-md-6 ml-auto mr-auto">
                                     <div class="profile">
                                         <div class="avatar">
-                                            <img src="https://www.biography.com/.image/ar_1:1%2Cc_fill%2Ccs_srgb%2Cg_face%2Cq_auto:good%2Cw_300/MTU0NjQzOTk4OTQ4OTkyMzQy/ansel-elgort-poses-for-a-portrait-during-the-baby-driver-premiere-2017-sxsw-conference-and-festivals-on-march-11-2017-in-austin-texas-photo-by-matt-winkelmeyer_getty-imagesfor-sxsw-square.jpg" alt="Circle Image" class="img-raised rounded-circle img-fluid" />
+                                            <img src="http://assets.stickpng.com/images/585e4bf3cb11b227491c339a.png" alt="Circle Image" class="img-raised rounded-circle img-fluid" />
                                         </div>
                                         <div class="name">
-                                            <h3 class="title">{myData.name}</h3>
-                                            <h6>Email: {myData.email}</h6>
+                                            <h3 className="text-gray-400 mt-7 font-semibold">{props.profileData.name}</h3>
+                                            <h6 className=" my-9 ">{props.profileData.email}</h6>
                                             <a href="#pablo" class="btn btn-just-icon btn-link btn-dribbble"><i class="fa fa-dribbble"></i></a>
                                             <a href="#pablo" class="btn btn-just-icon btn-link btn-twitter"><i class="fa fa-twitter"></i></a>
                                             <a href="#pablo" class="btn btn-just-icon btn-link btn-pinterest"><i class="fa fa-pinterest"></i></a>
@@ -89,7 +76,7 @@ const PatientProfile = (props) => {
                                     <div class="profile-tabs">
                                         <ul class="nav nav-pills nav-pills-icons justify-content-center" role="tablist">
                                             <li class="nav-item">
-                                                <button className='pb-10' onClick={()=>{ShowAppointmentsHandler();getAppointmentData()} }>
+                                                <button className='pb-10' onClick={() => { ShowAppointmentsHandler(); getAppointmentData() }}>
                                                     <a class={appointments ? "nav-link active" : "nav-link"} role="tab" data-toggle="tab">
                                                         <i class="material-icons">assignment</i>
                                                         Appointments
