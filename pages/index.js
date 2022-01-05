@@ -1,29 +1,20 @@
 import Head from 'next/head'
-import { useState,useEffect } from 'react';
+import { useState } from 'react';
 import Login from '../components/loginPage/Login'
 // import PatientRegisterPage from './PatientRegisterPage'
 // import DoctorRegisterPage from './DoctorRegisterPage'
 import 'bootstrap/dist/css/bootstrap.min.css';
-import Homepage from '../components/rihan/Homepage'
+import Homepage from './Homepage'
 // import Aboutus from '../components/rihan/aboutus'
 
 import axios from 'axios';
 
 
 const baseUrl = 'http://127.0.0.1:8000/';
-const tokenUrl = baseUrl + 'api/token/';
+const tokenUrl = baseUrl + 'auth/login/';
 export default function Home() {
 
   const [token, setToken] = useState('');
-  useEffect(()=> {
-    const tokendata = window.localStorage.getItem('token')
-    setToken(JSON.parse(tokendata))
- },[])
-
-  useEffect(()=> {
-     window.localStorage.setItem('token',JSON.stringify(token))
-  })
-
 
   const submitHandler = async (e, credintials) => {
     e.preventDefault();
@@ -34,14 +25,14 @@ export default function Home() {
   }
 
   if (!token) return <Login submitHandler={submitHandler} />
-  return (
 
+  return (
+    
     <main className="App">
-        <Header />
       <div className="right-container">
 
         <Homepage token={token} />
-    
+    {/* <Homepage/> */}
       </div>
       
     </main>

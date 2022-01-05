@@ -3,10 +3,6 @@ import Link from 'next/link'
 
 const DoctorRegisterPage = () => {
 
-
-  
-
-
   return (
     <section>
       <div className="doctor-register-left" />

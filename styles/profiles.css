@@ -1,6 +1,6 @@
 
 .h6, h6 {
-    font-size: .75rem !important;
+    /* font-size: .75rem !important; */
     font-weight: 500;
     font-family: Roboto,Helvetica,Arial,sans-serif;
     line-height: 1.5em;
@@ -379,13 +379,15 @@ footer{
     color: #555;
     padding: 25px;
     font-weight: 300;
+    height: 100%;
     
 }
 .footer p{
     margin-bottom: 0;
     font-size: 14px;
     margin: 0 0 10px;
-    font-weight: 300;
+    font-weight: bold;
+    
 }
 footer p a{
     color: #555;
