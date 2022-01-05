@@ -19,25 +19,12 @@ const DoctorClinick = (props) => {
     }
     let token ;
     await axios(conf).then(res => {
-        //   setDoctorData(res.data);
-          console.log(res.data)
           token = res.data.access
          
         })
 
         const decoded = jwtDecode(token)
 
-        console.log( {name :e.target.name.value,
-            speciality : e.target.speciality.value,
-            email :e.target.email.value,
-            phone_number : e.target.phone_number.value,
-            city : e.target.city.value,
-            town :e.target.town.value,
-            building_number : e.target.building_number.value,
-            street : e.target.street.value,
-            user :decoded.user_id,
-            img :e.target.img.value,
-            opening_hours : [9,10,11,12],})
     const config = {
         
         method: "POST",
@@ -58,14 +45,9 @@ const DoctorClinick = (props) => {
         }
     }
     
-    await axios(config).then(res => {
-    //   setDoctorData(res.data);
-      console.log(res.data)
-     
-    })
+    await axios(config)
 
 
-    // console.log(doctorData.id)
     window.location.href = '/'
 }
 

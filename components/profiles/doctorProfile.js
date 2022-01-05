@@ -52,7 +52,6 @@ const DoctorProfile = (props) => {
         };
         await axios(configPut)
     };
-console.log(props.profileData);
     return (
         <>
             <head>
