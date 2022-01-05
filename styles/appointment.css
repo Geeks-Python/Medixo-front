@@ -148,7 +148,7 @@ color:#828282;
 .info .open {
     /* padding-top: 10px; */
     font-weight: 500;
-    color:white
+    color:white !important;
 }
 
 .info p {
@@ -173,7 +173,7 @@ color:#828282;
 }
 
 .signupForm h2 {
-    font-weight: 600;
+    font-weight: 900px;
 }
 
 .inputFields {

@@ -2,6 +2,8 @@ import axios from 'axios';
 import React from 'react'
 import jwtDecode from 'jwt-decode';
 import { useState, useEffect } from 'react';
+import Navbar from "../../components/rihan/navbar"
+import Fotterr from "../../components/rihan/footer"
 
 // const token = async () => {
 //     const configToken = {
@@ -103,7 +105,8 @@ const Detail = ({ appointment }) => {
         });
     }
     return (
-
+<>
+<Navbar/>
         <div className='flex'>
             {/* <div className='doctorInfo'>
                 <img src={appointment.img} />
@@ -169,6 +172,8 @@ const Detail = ({ appointment }) => {
                 </form>
             </div>
         </div>
+        <Fotterr />
+        </>
     )
 }
 

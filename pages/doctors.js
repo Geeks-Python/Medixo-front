@@ -5,7 +5,7 @@ import Link from "next/link"
 import Navbar from "../components/rihan/navbar"
 import 'bootstrap/dist/css/bootstrap.min.css';
 import Fotterr from "../components/rihan/footer"
-import {useRouter} from 'next/router';
+import { useRouter } from 'next/router';
 
 
 
@@ -51,18 +51,15 @@ function Doctors() {
                     </div>
                 </section>
 
-                <div className='flex w-full'>
+                <div className='flex col-lg-12'>
                     {
                         doctorData.map((doctor) => {
                             console.log(doctor.name);
                             return (
 
-                               
-                                <div class="card">
- <div>
 
-           <p>{doctor.name}</p>                         
-</div>
+                                <div class=" card">
+                                    
                                     <div class="imgBox">
                                         <img src={doctor.img} alt="doctor img" class="mouse" />
                                     </div>
@@ -73,9 +70,10 @@ function Doctors() {
                                         <p class="address" ><b>Address:</b> {doctor.city}, {doctor.town}, building: {doctor.building_number}, {doctor.street} </p>
 
                                        
-//  <Link href={`appoinments/${doctor.id}`}><a class="buy">book apointment</a></Link>
                                         
-                                        <button onClick={()=>{router.push({pathname: `/details`,query: {q:doctor.id}})}}><a class="buy">book apointment</a></button>
+                                        {/* <Link href={`appoinments/${doctor.id}`}><a class="buy">book apointment</a></Link> */}
+
+                                        <button onClick={() => { router.push({ pathname: `/details`, query: { q: doctor.id } }) }}><a class="buy">book apointment</a></button>
 
                                     </div>
 

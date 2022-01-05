@@ -60,7 +60,7 @@ const DoctorClinick = (props) => {
         <div className="doctor-register-form">
 
         <form  className="mt-30 " onSubmit={handleCreateClinic} >
-        <h1 className='m-10'> Please Enter Your Clicnic Information</h1>
+        <h1 className='mb-4'> Please Enter Your Clicnic Information</h1>
           <label className="required" htmlFor="name">
             <input name="name" type="text" id="name" placeholder="name"  required />
           </label>
@@ -92,10 +92,12 @@ const DoctorClinick = (props) => {
           <label className="required" htmlFor="town">
             <input name="town" id="town" type="text" placeholder="town"  required /> <br/>
           </label>
-           
+          <br></br>
+
           <label className="required" htmlFor="building_number">
             <input name="building_number" id="building_number" type="text" placeholder="building_number"  required /> <br/>
           </label>
+          <br></br>
 
           <label className="required" htmlFor="street">
             <input name="street" id="street" type="text" placeholder="street"  required /> <br/>
@@ -104,10 +106,12 @@ const DoctorClinick = (props) => {
           {/* <label className="required" htmlFor="user">
             <input name="user" id="user" type="text" placeholder="user"  required /><br/>
           </label>  */}
+          <br></br>
 
           <label className="required" htmlFor="img">
             <input name="img" id="img" type="text" placeholder="img"  required /> <br/>
           </label>
+          <br></br>
 
           <label className="required" htmlFor="opening_hours">
             {/* <input name="opening_hours" id="opening_hours" type="text" placeholder="opening_hours"  required /> */}
