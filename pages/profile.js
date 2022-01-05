@@ -23,7 +23,7 @@ const Profile = () => {
         setAccessToken(storageToken)
         const config = {
             method: "GET",
-            url: "http://127.0.0.1:8000/api/v1/doctor/appointment/",
+            url: `${process.env.NEXT_PUBLIC_BACK_END}api/v1/doctor/appointment/`,
             headers: { 'Authorization': 'Bearer ' + storageToken },
         };
 
@@ -34,21 +34,22 @@ const Profile = () => {
 
         const configAddress = {
             method: "GET",
-            url: "http://127.0.0.1:8000/api/v1/doctor/",
+            url: `${process.env.NEXT_PUBLIC_BACK_END}api/v1/doctor/`,
             headers: { 'Authorization': 'Bearer ' + storageToken },
         };
         let finalData;
         await axios(configAddress).then(res => {
             finalData = res.data.filter(data => data.user == decoded.user_id);
             setProfileData(finalData);
+            console.log(res.data);
             setAllClinics(res.data)
         });
 
     }, []);
-
+console.log(profileData);
     return (
         <>
-            <Navbar/>
+            <Navbar />
             {decodedData.is_admin &&
                 <AdminProfile
                     allClinics={allClinics}
@@ -56,14 +57,16 @@ const Profile = () => {
                     profileData={decodedData}
                     accessToken={accessToken}
                 />
+
             }
             {(!decodedData.is_admin && decodedData.is_doctor) &&
-            <DoctorProfile
-                appointmentData={appointmentData}
-                profileData={profileData}
-                accessToken={accessToken}
-                decodedData={decodedData}
-            />
+                <DoctorProfile
+                    appointmentData={appointmentData}
+                    profileData={profileData}
+                    accessToken={accessToken}
+                    decodedData={decodedData}
+                />
+
             }
             {(!decodedData.is_admin && !decodedData.is_doctor) &&
                 <PatientProfile

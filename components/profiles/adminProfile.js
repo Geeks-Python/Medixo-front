@@ -56,7 +56,7 @@ const AdminProfile = (props) => {
                                         <div class="name">
                                             <h3 className="text-gray-400 mt-7 font-semibold">{props.profileData.name}</h3>
                                             <h6 className="text-gray-700 my-9  ">{props.profileData.email}</h6>
-                                            <h6 className='text-4xl font-bold text-pink-900'>Admin</h6>
+                                            <h6 className='text-4xl font-bold admin'>Admin</h6>
                                             <a href="#pablo" className="btn btn-just-icon btn-link btn-dribbble"><i className="fa fa-dribbble"></i></a>
                                             <a href="#pablo" className="btn btn-just-icon btn-link btn-twitter"><i className="fa fa-twitter"></i></a>
                                             <a href="#pablo" className="btn btn-just-icon btn-link btn-pinterest"><i className="fa fa-pinterest"></i></a>

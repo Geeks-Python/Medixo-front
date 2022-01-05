@@ -11,7 +11,7 @@ function ShowAllUsers(props) {
     const getUsers = () => {
         let config = {
             method: "GET",
-            url: "http://127.0.0.1:8000/auth/register/",
+            url: `${process.env.NEXT_PUBLIC_BACK_END}auth/register/`,
             headers: { 'Authorization': 'Bearer ' + props.accessToken },
         }
         axios(config).then(res => {
@@ -21,7 +21,7 @@ function ShowAllUsers(props) {
     const handleDelete = (id) => {
         const config = {
             method: "DELETE",
-            url: `http://127.0.0.1:8000/auth/register/${id}/`,
+            url: `${process.env.NEXT_PUBLIC_BACK_END}auth/register/${id}/`,
             headers: { 'Authorization': 'Bearer ' + props.accessToken },
         };
         axios(config).then(getUsers());

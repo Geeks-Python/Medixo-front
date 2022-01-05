@@ -14,7 +14,7 @@ const AdminCreateUser = () => {
         const storageToken = JSON.parse(window.localStorage.getItem("token"));
         const config = {
             method: "POST",
-            url: "http://127.0.0.1:8000/auth/register/",
+            url: `${process.env.NEXT_PUBLIC_BACK_END}auth/register/`,
             headers: { 'Authorization': 'Bearer ' + storageToken },
             data: {
                 username: e.target.userName.value,

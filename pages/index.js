@@ -1,11 +1,10 @@
-import Head from 'next/head'
 import { useState , useEffect } from 'react';
 import Login from '../components/loginPage/Login'
 import 'bootstrap/dist/css/bootstrap.min.css';
 import Homepage from './Homepage'
 import axios from 'axios';
 
-const baseUrl = 'http://127.0.0.1:8000/';
+const baseUrl = process.env.NEXT_PUBLIC_BACK_END;
 const tokenUrl = baseUrl + 'auth/login/';
 
 
