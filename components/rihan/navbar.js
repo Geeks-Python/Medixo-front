@@ -18,7 +18,6 @@ const navbar = () => {
 // 	 useEffect(() => { 
 // 		const tokendata = JSON.parse(window.localStorage.getItem('token'))
 // 		// const  decodeddata = jwtDecode(tokendata)
-// 		// console.log(decodeddata)	
 // 		},[])
 
 	const logout = (e) => {

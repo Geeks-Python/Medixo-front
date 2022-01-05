@@ -21,7 +21,6 @@ export default function Home() {
   })
   const submitHandler = async (e, credintials) => {
     e.preventDefault();
-    console.log(credintials);
     axios.post(tokenUrl, credintials).then(data => {
       setToken(data.data.access)
     });

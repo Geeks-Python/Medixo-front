@@ -2,84 +2,39 @@ import axios from 'axios';
 import React from 'react'
 import jwtDecode from 'jwt-decode';
 import { useState, useEffect } from 'react';
-
-// const token = async () => {
-//     const configToken = {
-//         method: "POST",
-//         url: "http://127.0.0.1:8000/auth/login/",
-//         data: {
-//             "username": "3",
-//             "password": "3"
-//         }
-//     }
-//     let to;
-//     await axios(configToken).then(data => {
-//         to = data.data.access
-//     });
+import { useRouter } from 'next/router';
 
 
-//     return to
-// }
-
-
-// export const getStaticPaths = async () => {
-
-//     let cred;
-//     await token().then(res => {
-//         cred = {
-//             headers: { "Authorization": `Bearer ${res}` }
-//         }
-//     });
-
-//     const res = await fetch("http://127.0.0.1:8000/api/v1/doctor/", cred)
-//     const data = await res.json()
-
-//     const paths = data.map(doctor => {
-//         return {
-
-//             params: { id: doctor.id.toString() }
-//         }
-//     });
-
-//     return {
-//         paths,
-//         fallback: false
-//     }
-// }
-
-// export const getStaticProps = async (context) => {
-//     const id = context.params.id;
-//     // let cred;
-//     // await token().then(res => {
-//     //     cred = {
-//     //         headers: { "Authorization": `Bearer ${res}` }
-//     //     }
-//     // });
-//     // const res = await fetch(`http://127.0.0.1:8000/api/v1/doctor/${id}/`, cred);
-//     // const data = await res.json();
-//     return {
-//         props: { id: id }
-//     }
-// }
-
-
-const Detail = ({ appointment }) => {
+const Details = () => {
     const [patientData, setpatientData] = useState("")
     const [accses, setAccses] = useState("")
+    const [clinicData, setClinicData] = useState("")
+    const router = useRouter()
 
     useEffect(async () => {
-
-        decoder();
+        // console.log(router.query.q);
+        const token = JSON.parse(window.localStorage.getItem("token"))
+        decoder(token);
+        getClinicData(token,router.query.q);
     }, [])
 
-    const decoder = () => {
-        token().then(res => {
-            setAccses(res);
-            const decoded = jwtDecode(res)
-            setpatientData(decoded)
+    const decoder = (token) => {
+
+        setAccses(token);
+        const decoded = jwtDecode(token)
+        setpatientData(decoded)
+    }
+
+    const getClinicData = (token,id) => {
+        const getConfig = {
+            method: "GET",
+            url: `http://127.0.0.1:8000/api/v1/doctor/${id}/`,
+            headers: { 'Authorization': `Bearer ${token}` },
+        };
+        axios(getConfig).then(res => {
+            setClinicData(res.data)
         });
 
-        // const decoded = jwtDecode(accses)
     }
 
     const appointmentSubmit = (e) => {
@@ -91,19 +46,17 @@ const Detail = ({ appointment }) => {
             data: {
                 patient_id: patientData.user_id,
                 patient_name: patientData.name,
-                Doctor_name: appointment.name,
+                Doctor_name: clinicData.name,
                 hour: e.target.hour.value,
                 date: e.target.date.value,
-                doctor_id: appointment.user,
-                clinic_location: `${appointment.city}, ${appointment.town}, ${appointment.building_number}, ${appointment.street}`
+                doctor_id: clinicData.user,
+                clinic_location: `${clinicData.city}, ${clinicData.town}, ${clinicData.building_number}, ${clinicData.street}`
             },
         }
-        axios(config).then(res => {
-            console.log(res);
-        });
+        axios(config)
     }
+    console.log(clinicData.opening_hours);
     return (
-
         <div className='flex'>
             {/* <div className='doctorInfo'>
                 <img src={appointment.img} />
@@ -116,7 +69,7 @@ const Detail = ({ appointment }) => {
             <div class="doctorInfo">
                 <div class="cards">
                     <div class="cards__image-container">
-                        <img class="cards__image img" src={appointment.img} alt="" />
+                        <img class="cards__image img" src={clinicData.img} alt="" />
                     </div>
 
                     <svg class="cards__svg" viewBox="0 0 800 500">
@@ -126,9 +79,9 @@ const Detail = ({ appointment }) => {
                     </svg>
 
                     <div class="cards__content text-center">
-                        <h1 class="cards__title">Dr. {appointment.name}</h1>
-                        <h3>{appointment.speciality}</h3>
-                        <h4><b className='text-white' >Address: </b>{appointment.city}, {appointment.town}, building: {appointment.building_number}, {appointment.street} </h4>
+                        <h1 class="cards__title">Dr. {clinicData.name}</h1>
+                        <h3>{clinicData.speciality}</h3>
+                        <h4><b className='text-white' >Address: </b>{clinicData.city}, {clinicData.town}, building: {clinicData.building_number}, {clinicData.street} </h4>
                     </div>
                 </div>
             </div>
@@ -141,8 +94,8 @@ const Detail = ({ appointment }) => {
                     <p className='float-right  mr-8'>09:00 to 06:00</p>
 
                     <h2 className=" mt-14  mb-7">Contact Informations</h2>
-                    <h4><b className='text-white'>Phone: </b>{appointment.phone_number}</h4>
-                    <h4><b className='text-white'>Email: </b>{appointment.email}</h4>
+                    <h4><b className='text-white'>Phone: </b>{clinicData.phone_number}</h4>
+                    <h4><b className='text-white'>Email: </b>{clinicData.email}</h4>
                 </div>
 
                 <form class="signupForm" onSubmit={appointmentSubmit}>
@@ -154,10 +107,10 @@ const Detail = ({ appointment }) => {
                         </li>
                         <li>
                             <select id="hour" name="hour" class="inputFields" required>
-                                {
-                                    appointment.opening_hours.map(hour => {
+                                {clinicData &&
+                                    clinicData.opening_hours.map(hour => {
                                         return <option value={hour}>{hour}:00 to {hour + 1}:00</option>
-                                    })
+                                    }) 
                                 }
                             </select>
                         </li>
@@ -171,4 +124,4 @@ const Detail = ({ appointment }) => {
     )
 }
 
-export default Detail
+export default Details
