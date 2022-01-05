@@ -380,14 +380,14 @@ footer {
     color: #555;
     padding: 25px;
     font-weight: 300;
-
+    height: 100%;
 }
-
 .footer p {
     margin-bottom: 0;
     font-size: 14px;
     margin: 0 0 10px;
-    font-weight: 300;
+    font-weight: bold;
+    
 }
 
 footer p a {

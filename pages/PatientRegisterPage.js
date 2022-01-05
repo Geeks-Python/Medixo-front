@@ -24,11 +24,12 @@ const PatientRegisterPage = () => {
         is_superuser: false,
       }
     }
+    axios(config).then(res => {
+        console.log(res.data);
+    })
+    window.location.href = '/'
 
-    axios(config)
-  }
-
-
+}
 
   return (
     <section>

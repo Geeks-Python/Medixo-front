@@ -286,12 +286,12 @@ Copyright &copy;<script data-cfasync="false" src="/cdn-cgi/scripts/5c5dd728/clou
     </div>
   </footer> */}
 
-         <footer class="footer text-center lg:text-left  ">
+         <footer class="footer text-center lg:text-left mt03  ">
             <div class="footer2 flex justify-center items-center lg:justify-between p-6 border-b border-gray-300 ">
               <div class="mr-12 hidden lg:block">
                 <span>Get connected with us on social networks:</span>
               </div>
-              <div class="footer3 flex justify-center ">
+              <div class="footer3 flex justify-center  ">
                 <a href="#!" class="mr-6 text-gray-600">
                   <svg aria-hidden="true" focusable="false" data-prefix="fab" data-icon="facebook-f"
                     class="w-2.5" role="img" xmlns="http://www.w3.org/2000/svg"
@@ -347,10 +347,10 @@ Copyright &copy;<script data-cfasync="false" src="/cdn-cgi/scripts/5c5dd728/clou
 
 
 
-            <div class="title mx-6 py-10  md:text-left">
+            <div class="title mx-6 py-10  md:text-left pb-1">
               <div class="grid grid-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-                <div class="ml-10 w-1/2">
-                  <h6 class="
+                <div class="ml-10 w-3/4">
+                  <h6 class=" med text-3xl
                               uppercase
                               font-semibold
                               mb-4
@@ -359,32 +359,31 @@ Copyright &copy;<script data-cfasync="false" src="/cdn-cgi/scripts/5c5dd728/clou
                               justify-center
                               md:justify-start
                                                           ">
-                    <svg aria-hidden="true" focusable="false" data-prefix="fas" data-icon="cubes"
+                    {/* <svg aria-hidden="true" focusable="false" data-prefix="fas" data-icon="cubes"
                       class="w-4 mr-3" role="img" xmlns="http://www.w3.org/2000/svg"
                       viewBox="0 0 512 512">
                       <path fill="currentColor"
                         d="M488.6 250.2L392 214V105.5c0-15-9.3-28.4-23.4-33.7l-100-37.5c-8.1-3.1-17.1-3.1-25.3 0l-100 37.5c-14.1 5.3-23.4 18.7-23.4 33.7V214l-96.6 36.2C9.3 255.5 0 268.9 0 283.9V394c0 13.6 7.7 26.1 19.9 32.2l100 50c10.1 5.1 22.1 5.1 32.2 0l103.9-52 103.9 52c10.1 5.1 22.1 5.1 32.2 0l100-50c12.2-6.1 19.9-18.6 19.9-32.2V283.9c0-15-9.3-28.4-23.4-33.7zM358 214.8l-85 31.9v-68.2l85-37v73.3zM154 104.1l102-38.2 102 38.2v.6l-102 41.4-102-41.4v-.6zm84 291.1l-85 42.5v-79.1l85-38.8v75.4zm0-112l-102 41.4-102-41.4v-.6l102-38.2 102 38.2v.6zm240 112l-85 42.5v-79.1l85-38.8v75.4zm0-112l-102 41.4-102-41.4v-.6l102-38.2 102 38.2v.6z">
                       </path>
-                    </svg>
-                    Tailwind ELEMENTS
+                    </svg> */}
+                   MEDIXO
                   </h6>
-                  <p>
-                    Here you can use rows and columns to organize your footer content. Lorem ipsum dolor
-                    sit amet, consectetur adipisicing elit.
+                  <p class="font-medium">
+                  We're here when you need us. For everyday care or life-changing care, you can count on us to keep you and your loved ones safe and healthy.
                   </p>
                 </div>
 
-                <div class="hours ml-10">
-                  <h6 class="uppercase font-semibold mb-4  justify-center ">
+                <div class="hours ml-10 ">
+                  <h6 class="uppercase font-semibold mb-4  justify-center  ">
                     Opening Hours
                   </h6>
 
-                  <h6>Sunday  : 8:00 - 19:00</h6>
-                  <h6>Monday : 8:00 - 19:00</h6>
-                  <h6>Tuesday : 8:00 - 19:00</h6>
-                  <h6>Wednesday : 8:00 - 19:00</h6>
-                  <h6>Thursday : 8:00 - 19:00</h6>
-                  <h6>Saturday : 8:00 - 19:00</h6>
+                  <h6 class="pb-1">Sunday  : 8:00 - 19:00</h6>
+                  <h6 class="pb-1">Monday : 8:00 - 19:00</h6>
+                  <h6 class="pb-1">Tuesday : 8:00 - 19:00</h6>
+                  <h6 class="pb-1">Wednesday : 8:00 - 19:00</h6>
+                  <h6 class="pb-1">Thursday : 8:00 - 19:00</h6>
+                  <h6 class="pb-1">Saturday : 8:00 - 19:00</h6>
                 </div>
 
 
