@@ -1,5 +1,11 @@
-import React, { Component } from "react";
-import { useState,useEffect } from "react";
+import React, { Component } from 'react'
+import Link from 'next/link'
+import { useState, useEffect } from 'react'
+
+
+
+// import axios from 'axios';
+import { MdLogout } from "react-icons/md";
 
 
 import jwtDecode from "jwt-decode";
@@ -26,10 +32,12 @@ const navbar = () => {
 	};
 	console.log(name)
 	
+
 	return (
 		<div>
 			<header class="header trans_400">
 				<div class="header_content d-flex flex-row align-items-center jusity-content-start trans_400">
+
 					<div class="logo">
 						<a href="#">
 							<div>
@@ -39,6 +47,9 @@ const navbar = () => {
 						</a>
 					</div>
 					<nav class="main_nav">
+
+
+
 						<ul class="d-flex flex-row align-items-center justify-content-start">
 							<li class="active">
 								<a href="index.html">Home</a>

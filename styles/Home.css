@@ -72,6 +72,7 @@
     padding: 60px 0 60px 0px;
     background-color: #ffffff;
     color: rgb(0, 0, 0);
+
 }
 
 .services .content {
@@ -110,9 +111,9 @@
     line-height: 120px;
 }
 
-.svgHome {
+.ed {
     color: #2196f3;
-    margin-left:2.2em
+    margin-left:8.9em
 }
 
 section#services {
@@ -127,7 +128,7 @@ section#services {
 
 #first-P h1::after{
   color: white;
-  content: "to our my ";
+  content: "To Medixo";
   animation: change-content 1.5s ease-in-out forwards infinite alternate ;
 }
 
@@ -136,38 +137,41 @@ section#services {
       content: "";
   }
   7%{
-      content: "t";
+      content: "T";
   }
   14%{
-      content: "to";
+      content: "To";
   }
   21%{
-      content: "to o";
+      content: "To M";
   }
   28%{
-      content: "to ou";
+      content: "To Me";
   }
   35%{
-      content: "to our";
+      content: "To Med";
   }
   42%{
-      content: "to our m";
+      content: "To Medi";
   }
   49%{
-      content: "to our my";
+      content: "To Medix";
   }
   56%{
-      content: "to our my s";
+      content: "To Medixo";
   }
-  73%{
-      content: "to our my si";
+  /* 73%{
+      content: "To Medixo S";
+  } */
+  /* 80%{
+      content: "To Medixo Si";
   }
-  80%{
-      content: "to our my sit";
+  85%{
+      content: "To Medixo Sit";
   }
   100%{
-      content: "to our my site";
-  }
+    content: "To Medixo Site";
+} */
   /* 95%{
       content: "Study Station";
   }
@@ -186,4 +190,92 @@ section#services {
   100%{
       content: "Study Station!";
   } */
+}
+
+
+
+
+
+
+#first-c h1 {
+  text-align: inherit;
+}
+/* 
+#first-c h1::after{
+  color: white;
+  content: "To Medixo";
+  animation: change-content 1.5s ease-in-out forwards infinite alternate ;
+}
+
+@keyframes change-content {
+  0%{
+      content: "";
+  }
+  7%{
+      content: "T";
+  }
+  14%{
+      content: "To";
+  }
+  21%{
+      content: "To M";
+  }
+  28%{
+      content: "To Me";
+  }
+  35%{
+      content: "To Med";
+  }
+  42%{
+      content: "To Medi";
+  }
+  49%{
+      content: "To Medix";
+  }
+  56%{
+      content: "To Medixo";
+  }
+  /* 73%{
+      content: "To Medixo S";
+  } */
+  /* 80%{
+      content: "To Medixo Si";
+  }
+  85%{
+      content: "To Medixo Sit";
+  }
+  100%{
+    content: "To Medixo Site";
+} */
+  /* 95%{
+      content: "Study Station";
+  }
+  96%{
+      content: "Study Station!";
+  }
+  97%{
+      content: "Study Station!";
+  }
+  98%{
+      content: "Study Station!";
+  }
+  99%{
+      content: "Study Station!";
+  }
+  100%{
+      content: "Study Station!";
+  } */
+/* } */
+
+
+ */
+
+
+
+
+
+
+
+.header .header_content  .main_nav .nave .logout{
+  margin-left: 30em;
 }

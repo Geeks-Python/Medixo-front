@@ -2,6 +2,11 @@ import axios from 'axios'
 import React from 'react'
 import { useState, useEffect } from 'react';
 import Link from "next/link"
+import Navbar from "../components/rihan/navbar"
+import 'bootstrap/dist/css/bootstrap.min.css';
+import Fotterr from "../components/rihan/footer"
+
+
 
 
 function Doctors() {
@@ -43,12 +48,29 @@ function Doctors() {
 
     return (
         <div>
+             <Navbar />
             <div>
-                <img src='https://www.childrensmedgroup.com/cmg-media/uploads/2020/08/join-our-team-childrens-med-group.png'alt="doctorimg" class="doctorwall" />
-                <div >
-                    <h1 className='doctorsH1'>Meet Our Experience Doctors</h1>
-                    <p className='doctorsp'> “Medicine cure diseases put only doctors can cure patients."</p>
+
+
+            <section class="home_banner_area2">
+            <div class="banner_inner d-flex align-items-center">
+              <div class="container">
+                <div class="banner_content row ">
+                  <div class="col-lg-12 " id="first-c" >
+                    <h1>Meet Our  Doctors </h1>
+                    <p>The doctor of the future will give no medicine but will interest his patients in the care of the human frame, in diet and in the cause and prevention of disease.</p>
+                    {/* <a class="main_btn mr-10" href="#">get started</a> */}
+                  </div>
                 </div>
+              </div>
+            </div>
+          </section>
+
+
+                
+
+
+            
                 <div className='flex w-full'>
 
                     {
@@ -79,6 +101,8 @@ function Doctors() {
 
                 </div>
             </div>
+
+            <Fotterr/>
         </div>
     )
 }

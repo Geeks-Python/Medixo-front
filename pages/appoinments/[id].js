@@ -2,6 +2,9 @@ import axios from 'axios';
 import React from 'react'
 import jwtDecode from 'jwt-decode';
 import { useState, useEffect } from 'react';
+import Navbar from "../../components/rihan/navbar"
+import Fotterr from "../../components/rihan/footer"
+import 'bootstrap/dist/css/bootstrap.min.css';
 
 const token = async () => {
     const configToken = {
@@ -103,8 +106,10 @@ const Detail = ({ appointment }) => {
         });
     }
     return (
-
+<>
+<Navbar/>
         <div className='flex'>
+           
             {/* <div className='doctorInfo'>
                 <img src={appointment.img} />
                 <h2>{appointment.name}</h2>
@@ -121,7 +126,7 @@ const Detail = ({ appointment }) => {
 
                     <svg class="cards__svg" viewBox="0 0 800 500">
 
-                        <path d="M 0 100 Q 50 200 100 250 Q 250 400 350 300 C 400 250 550 150 650 300 Q 750 450 800 400 L 800 500 L 0 500" stroke="transparent" fill="#333" />
+                        <path d="M 0 100 Q 50 200 100 250 Q 250 400 350 300 C 400 250 550 150 650 300 Q 750 450 800 400 L 800 500 L 0 500" stroke="transparent" fill="#57ccc3" />
                         <path class="cards__line" d="M 0 100 Q 50 200 100 250 Q 250 400 350 300 C 400 250 550 150 650 300 Q 750 450 800 400" stroke="pink" stroke-width="3" fill="transparent" />
                     </svg>
 
@@ -135,12 +140,12 @@ const Detail = ({ appointment }) => {
 
             <div class="signupSection">
                 <div class="info">
-                    <h2 className=" m-5 ">Opening Hours</h2>
+                    <h2 className="m-5 ">Opening Hours</h2>
                     <i class="icon ion-ios-ionic-outline" aria-hidden="true"></i>
                     <p className='float-left ml-8'>Saturday-Thursday</p>
-                    <p className='float-right  mr-8'>09:00 to 06:00</p>
+                    <p className='float-right mr-8'>09:00 to 06:00</p>
 
-                    <h2 className=" mt-14  mb-7">Contact Informations</h2>
+                    <h2 className=" mt-14 mb-7">Contact Informations</h2>
                     <h4><b className='text-white'>Phone: </b>{appointment.phone_number}</h4>
                     <h4><b className='text-white'>Email: </b>{appointment.email}</h4>
                 </div>
@@ -168,6 +173,9 @@ const Detail = ({ appointment }) => {
                 </form>
             </div>
         </div>
+        <Fotterr/>
+
+        </>
     )
 }
 

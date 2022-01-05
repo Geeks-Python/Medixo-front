@@ -28,6 +28,8 @@ const PatientRegisterPage = () => {
     axios(config).then(res => {
         console.log(res.data);
     })
+    window.location.href = '/'
+
 }
 
   

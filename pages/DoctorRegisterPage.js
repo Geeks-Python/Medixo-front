@@ -3,6 +3,7 @@ import Link from "next/link";
 import axios from "axios";
 import DoctorClinick from './DoctorClinick'
 const DoctorRegisterPage = () => {
+
 	const [doctorData, setDoctorData] = useState("");
 	const [pass, setPass] = useState("");
 	const handleCreateDoctor = (e) => {

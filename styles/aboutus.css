@@ -4,14 +4,39 @@
 
   margin-top:100px;
   
-  
+  padding: 0px 90px;
+  }
+
+  .aboutUS{
+    width: 100%;
+    padding: 0 6%;
+    
+margin-top:80px;
+  }
+
+
+  #aboutOurWebpage , #medixo{
+    text-align: justify;
+    padding: 50px;
+    letter-spacing: 0.8px;
+    line-height: 1.8;
+    word-spacing: 1.5px;
+    width: 100%;
+    padding: 0 9%;
+    
+  }
+  #aboutOurWebpage h2 , #medixo h2 {
+    text-transform: uppercase;
+    padding: 1em;
   }
   
   .our-team {
-    padding: 10px 0 20px;
-    margin-bottom: 20px;
-    /* width: 300px;
-    height: 300px; */
+    /* padding: 10px 0 10px; */
+    margin-left: 90px;
+    margin-bottom: 10px;
+    width: 300px;
+    height: 350px;
+    padding: 10px 10px;
     background-color: #f7f5ec;
     text-align: center;
     overflow: hidden;

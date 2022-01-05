@@ -90,10 +90,10 @@ export default class welcome extends Component {
 
 
           <div class="col-lg-6 py-3  "> 
-          <h1>Welcome to Your Health <br/> Center</h1>
-          <p class="text-grey mb-4">Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Accusantium aperiam earum ipsa eius, inventore nemo labore eaque porro consequatur ex aspernatur. Explicabo, excepturi accusantium! Placeat voluptates esse ut optio facilis!</p>
+          <h1>Why choose the Medixo Center?<br/> </h1>
+          <p class="text-grey mb-4">We offer something different from other practices care that doesn’t end when you leave our clinic. We want to help you stay healthy even when you’re not here – by showing you how to avoid sickness, manage chronic conditions, and giving you the information and support you need to achieve better health.</p>
 
-                    <a class="main_btn mr-10" href="#">get started</a>
+                    <a class="main_btn mr-10" href="/aboutus">View More</a>
                   </div>
 
 
