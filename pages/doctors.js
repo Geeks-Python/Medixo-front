@@ -5,39 +5,23 @@ import Link from "next/link"
 
 
 function Doctors() {
-    const [token, setToken] = useState('');
     const [doctorData, setDoctorData] = useState([]);
 
     useEffect(() => {
-        handel()
+        const storageToken = JSON.parse(window.localStorage.getItem("token"))
+        
+        handel(storageToken)
     }, []);
 
-    const handel = async () => {
-        const configToken = {
-            method: "POST",
-            url: "http://127.0.0.1:8000/auth/login/",
-            data: {
-                "username": "3",
-                "password": "3"
-            }
-        }
-
-        let to;
-        await axios(configToken).then(data => {
-            setToken(data.data.access);
-            to = data.data.access
-        });
-
+    const handel = async (token) => {
         const config = {
             method: "GET",
             url: "http://127.0.0.1:8000/api/v1/doctor/",
-            headers: { 'Authorization': 'Bearer ' + to },
-
+            headers: { 'Authorization': 'Bearer ' + token },
+            
         }
         await axios(config).then(res => {
             setDoctorData(res.data);
-            console.log(res.data);
-
         });
     }
 
