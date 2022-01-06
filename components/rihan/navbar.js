@@ -30,7 +30,6 @@ const navbar = () => {
 					<ul class="nave d-flex flex-row align-items-center justify-content-start">
 							<li class=""><a href="/">Home</a></li>
 							<li><a href="/doctors">Doctors</a></li>
-							<li><a href="blog.html">News</a></li>
 							<li><a href="/aboutus"> About us</a></li>
 							<li><a href="/profile">Profile</a></li>
 							<li class="aa"  ><a style={{ 'cursor': 'pointer' }}  onClick={logout}> Logout </a></li>
