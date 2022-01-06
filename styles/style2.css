@@ -40,7 +40,7 @@ button:focus {
 
 
 .home_banner_area {
-  background: url(../public/home.jpg) no-repeat center bottom;
+  background: url(https://i.ibb.co/CMRBYfG/home.webp) no-repeat center bottom;
   position: relative;
   z-index: 1;
   height: 780px;
@@ -106,7 +106,7 @@ button:focus {
 }
 
 .home_banner_area2 {
-  background: url(../public/slider-bg-1.jpg) no-repeat center bottom;
+  background: url(https://i.ibb.co/9cpvLs3/slider-bg-1.jpg) no-repeat center bottom;
   position: relative;
   z-index: 1;
   height: 980px;
