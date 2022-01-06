@@ -20,7 +20,6 @@ const DoctorClinick = (props) => {
     }
     let token;
     await axios(conf).then(res => {
-      //   setDoctorData(res.data);
       token = res.data.access
 
     })
@@ -41,7 +40,7 @@ const DoctorClinick = (props) => {
         building_number: e.target.building_number.value,
         street: e.target.street.value,
         user: decoded.user_id,
-        img: e.target.clinc_img.value,
+        img: e.target.img.value,
         opening_hours: [9, 10, 11, 12],
       }
     }
