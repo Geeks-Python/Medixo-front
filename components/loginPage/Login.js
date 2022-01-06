@@ -17,14 +17,11 @@ function Login({ submitHandler }) {
   
   return (
     <div>
-
-
       <>
         <div className="login-left" />
 
         <div className="login-right">
           <div className="login-form">
-
 
             <form className="mt-36 " onSubmit={e => submitHandler(e, credintials)} method='post'>
               <h1>Login</h1>
@@ -51,9 +48,6 @@ function Login({ submitHandler }) {
         </div>
 
       </>
-
-
-
     </div>
   )
 }

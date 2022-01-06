@@ -21,7 +21,6 @@ const DoctorClinick = (props) => {
     let token;
     await axios(conf).then(res => {
       //   setDoctorData(res.data);
-      console.log(res.data)
       token = res.data.access
 
     })

@@ -6,6 +6,7 @@ const navbar = () => {
 	const logout = (e) => {
 		localStorage.clear();
 		window.location.reload();
+		window.location.href = '/'
 	};
 	
 

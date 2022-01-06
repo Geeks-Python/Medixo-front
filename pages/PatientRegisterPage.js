@@ -9,16 +9,7 @@ const PatientRegisterPage = () => {
 
   const handleCreateUser = async (e) => {
     e.preventDefault();
-    console.log({
-      username: e.target.username.value,
-      password: e.target.password.value,
-      password2: e.target.rePassword.value,
-      email: e.target.email.value,
-      first_name: e.target.firstName.value,
-      last_name: e.target.lastName.value,
-      is_staff: false,
-      is_superuser: false,
-    });
+
     const config = {
       method: "POST",
       url: `${process.env.NEXT_PUBLIC_BACK_END}auth/register/`,

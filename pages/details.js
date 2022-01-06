@@ -57,7 +57,6 @@ const Details = () => {
         }
         axios(config)
     }
-    console.log(clinicData.opening_hours);
     return (
         <>
             <Navbar />

@@ -41,12 +41,10 @@ const Profile = () => {
         await axios(configAddress).then(res => {
             finalData = res.data.filter(data => data.user == decoded.user_id);
             setProfileData(finalData);
-            console.log(res.data);
             setAllClinics(res.data)
         });
 
     }, []);
-console.log(profileData);
     return (
         <>
             <Navbar />
