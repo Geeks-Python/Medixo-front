@@ -26,7 +26,7 @@ const AllClinics = (props) => {
     const handleDelete = async (id) => {
         const config = {
             method: "DELETE",
-            url: `process.env.NEXT_PUBLIC_BACK_ENDapi/v1/doctor/${id}/`,
+            url: `${process.env.NEXT_PUBLIC_BACK_END}api/v1/doctor/${id}/`,
             headers: { 'Authorization': 'Bearer ' + props.accessToken },
         };
         await axios(config).then(getData());
